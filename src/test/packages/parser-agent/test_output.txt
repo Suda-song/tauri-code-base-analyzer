@@ -1,0 +1,258 @@
+🧪 测试 Workspace 全场景功能...
+
+📁 创建复杂的 workspace 测试结构...
+✅ 创建了 21 个文件
+
+📊 测试文件扫描功能...
+
+🚀 开始从目录提取实体: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive
+通过工作区配置找到: @test/shared -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared
+通过工作区配置找到: @test/utils -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils
+通过工作区配置找到: @test/vue-components -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/vue-components
+通过工作区配置找到: @test/web-app -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web
+通过工作区配置找到: local-lib -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/libs/database/orm
+通过工作区配置找到: @test/build-tools -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared
+🚀 并行扫描 6 个workspace包路径...
+📂 扫描目录: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared
+📂 扫描目录: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils
+📂 扫描目录: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/vue-components
+📂 扫描目录: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web
+📂 扫描目录: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/libs/database/orm
+📂 扫描目录: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared
+📁 扫描根目录文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive
+📄 找到文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared/index.ts
+📄 找到文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared/types.ts
+📄 找到文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/libs/database/orm/index.ts
+📄 找到文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils/helpers.ts
+📄 找到文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils/math.ts
+📄 找到文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/vue-components/Button.vue
+📄 找到文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared/build.ts
+📂 扫描目录: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src
+✅ 根目录扫描完成: 0 个文件
+📄 找到文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src/App.tsx
+📂 扫描目录: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src/services
+📄 找到文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src/services/userService.ts
+📊 文件扫描完成: 找到 9 个文件，耗时 9ms
+📁 找到 9 个文件
+📊 处理批次 1/1 (9 个文件)
+📄 从TS文件提取实体: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared/types.ts
+🔍 [FunctionExtractor] 开始提取: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared/types.ts
+✅ [FunctionExtractor] /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared/types.ts 提取完成: 1 个实体, 耗时: 7ms
+✅ 从文件 /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared/types.ts 提取到 1 个实体
+📄 从TSX文件提取实体: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src/App.tsx
+🔍 [TSXExtractor] 开始提取: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src/App.tsx
+✅ [TSXExtractor] /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src/App.tsx 提取完成: 2 个实体, 耗时: 10ms
+✅ 从文件 /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src/App.tsx 提取到 2 个实体
+📄 从TS文件提取实体: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils/helpers.ts
+🔍 [FunctionExtractor] 开始提取: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils/helpers.ts
+✅ [FunctionExtractor] /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils/helpers.ts 提取完成: 4 个实体, 耗时: 2ms
+✅ 从文件 /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils/helpers.ts 提取到 4 个实体
+📄 从TS文件提取实体: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils/math.ts
+🔍 [FunctionExtractor] 开始提取: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils/math.ts
+✅ [FunctionExtractor] /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils/math.ts 提取完成: 3 个实体, 耗时: 2ms
+✅ 从文件 /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils/math.ts 提取到 3 个实体
+📄 从TS文件提取实体: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared/index.ts
+🔍 [FunctionExtractor] 开始提取: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared/index.ts
+✅ [FunctionExtractor] /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared/index.ts 提取完成: 5 个实体, 耗时: 1ms
+✅ 从文件 /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared/index.ts 提取到 5 个实体
+📄 从Vue文件提取实体: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/vue-components/Button.vue
+分析Vue文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/vue-components/Button.vue
+  - 找到script setup标签
+✅ 从文件 /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/vue-components/Button.vue 提取到 1 个实体
+📄 从TS文件提取实体: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src/services/userService.ts
+🔍 [FunctionExtractor] 开始提取: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src/services/userService.ts
+✅ [FunctionExtractor] /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src/services/userService.ts 提取完成: 2 个实体, 耗时: 1ms
+✅ 从文件 /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src/services/userService.ts 提取到 2 个实体
+📄 从TS文件提取实体: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/libs/database/orm/index.ts
+🔍 [FunctionExtractor] 开始提取: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/libs/database/orm/index.ts
+✅ [FunctionExtractor] /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/libs/database/orm/index.ts 提取完成: 3 个实体, 耗时: 2ms
+✅ 从文件 /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/libs/database/orm/index.ts 提取到 3 个实体
+📄 从TS文件提取实体: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared/build.ts
+🔍 [FunctionExtractor] 开始提取: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared/build.ts
+✅ [FunctionExtractor] /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared/build.ts 提取完成: 3 个实体, 耗时: 1ms
+✅ 从文件 /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared/build.ts 提取到 3 个实体
+⏱️  实体提取统计:
+  - 总文件数: 9
+  - 成功提取: 9
+  - 失败文件: 0
+  - 总实体数: 24
+  - 总耗时: 43ms
+  - 平均耗时: 5ms/文件
+🔄 ID唯一性处理: 0ms, 最终实体数: 24
+缓存已清理
+📈 扫描结果: 找到 24 个实体
+
+📄 按 Workspace 包分组的实体:
+
+📦 shared (6 个实体):
+  ├── Function:formatDate (function) - formatDate
+  ├── Function:calculateAge (function) - calculateAge
+  ├── Function:index (function) - createLogger
+  ├── Variable:APP_VERSION (variable) - APP_VERSION
+  ├── Variable:DEFAULT_CONFIG (variable) - DEFAULT_CONFIG
+  ├── Class:UserService (class) - UserService
+
+📦 utils (7 个实体):
+  ├── Function:capitalize (function) - capitalize
+  ├── Function:slugify (function) - slugify
+  ├── Function:getFormattedToday (function) - getFormattedToday
+  ├── Variable:STRING_CONSTANTS (variable) - STRING_CONSTANTS
+  ├── Function:add (function) - add
+  ├── Function:multiply (function) - multiply
+  ├── Class:Calculator (class) - Calculator
+
+📦 vue-components (1 个实体):
+  ├── Component:Button (component) - setup
+
+📦 apps/web (4 个实体):
+  ├── Component:apps/web/src/App.tsx (component) - App
+  ├── Component:UserManagement (component) - UserManagement
+  ├── Function:createUserService (function) - createUserService
+  ├── Class:ExtendedUserService (class) - ExtendedUserService
+
+📦 libs/database/orm (3 个实体):
+  ├── Class:BaseEntity (class) - BaseEntity
+  ├── Component:Repository (component) - Repository
+  ├── Variable:DB_CONFIG (variable) - DB_CONFIG
+
+📦 tools/shared (3 个实体):
+  ├── Function:buildProject (function) - buildProject
+  ├── Function:optimizeAssets (function) - optimizeAssets
+  ├── Variable:BUILD_CONFIG (variable) - BUILD_CONFIG
+
+✅ 验证文件扫描正确性:
+  ✅ 正确扫描: packages/shared
+  ✅ 正确扫描: packages/utils
+  ✅ 正确扫描: packages/vue-components
+  ✅ 正确扫描: libs/database/orm
+  ✅ 正确扫描: tools/shared
+  ✅ 正确扫描: apps/web
+  ✅ 正确跳过: node_modules
+  ✅ 正确跳过: external-lib
+
+🔍 测试依赖分析功能...
+
+通过工作区配置找到: @test/shared -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared
+通过工作区配置找到: @test/utils -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils
+通过工作区配置找到: @test/vue-components -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/vue-components
+通过工作区配置找到: @test/web-app -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web
+通过工作区配置找到: @test/build-tools -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared
+📋 分析 App.tsx (Component:apps/web/src/App.tsx):
+分析文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src/App.tsx
+检查导入: react
+跳过非workspace导入: react
+检查导入: @test/shared
+收集workspace导入: @test/shared -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared
+模块 @test/shared 导出: APP_VERSION, DEFAULT_CONFIG, formatDate, calculateAge, createLogger
+记录默认导入: createLogger <- @test/shared
+记录命名导入: formatDate <- @test/shared
+记录命名导入: APP_VERSION <- @test/shared
+检查导入: @test/utils/helpers
+跳过非workspace导入: @test/utils/helpers
+检查导入: @test/utils/math
+跳过非workspace导入: @test/utils/math
+检查导入: local-lib
+收集workspace导入: local-lib -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared
+无法找到模块 /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared 的入口文件
+模块 local-lib 导出: 
+提取到 3 个workspace导入
+开始收集workspace导入信息...
+跳过非workspace导入: react
+收集workspace导入: @test/shared -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared
+模块 @test/shared 导出: APP_VERSION, DEFAULT_CONFIG, formatDate, calculateAge, createLogger
+记录默认导入: createLogger <- @test/shared
+记录命名导入: formatDate <- @test/shared
+记录命名导入: APP_VERSION <- @test/shared
+跳过非workspace导入: @test/utils/helpers
+跳过非workspace导入: @test/utils/math
+收集workspace导入: local-lib -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared
+无法找到模块 /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared 的入口文件
+模块 local-lib 导出: 
+总共收集到 3 个workspace导入
+检测到直接调用: createLogger() -> Function:shared
+提取到 1 个workspace内部调用
+注释: 主应用组件
+展示workspace包的集成使用
+  📥 导入 (3): [ 'Function:shared', 'Function:formatDate', 'Function:APP_VERSION' ]
+  📞 调用 (1): [ 'Function:shared' ]
+  📡 事件 (0): []
+  💬 注释: 主应用组件
+展示workspace包的集成使用
+
+📋 分析 helpers.ts (Function:getFormattedToday):
+分析文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/utils/helpers.ts
+检查导入: @test/shared
+收集workspace导入: @test/shared -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared
+模块 @test/shared 导出: APP_VERSION, DEFAULT_CONFIG, formatDate, calculateAge, createLogger
+记录命名导入: formatDate <- @test/shared
+提取到 1 个workspace导入
+开始收集workspace导入信息...
+收集workspace导入: @test/shared -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/packages/shared
+模块 @test/shared 导出: APP_VERSION, DEFAULT_CONFIG, formatDate, calculateAge, createLogger
+记录命名导入: formatDate <- @test/shared
+总共收集到 1 个workspace导入
+检测到直接调用: formatDate() -> Function:formatDate
+提取到 1 个workspace内部调用
+注释: 使用其他workspace包
+  📥 导入 (1): [ 'Function:formatDate' ]
+  📞 调用 (1): [ 'Function:formatDate' ]
+  📡 事件 (0): []
+  💬 注释: 使用其他workspace包
+
+📋 分析 userService.ts (Class:ExtendedUserService):
+分析文件: /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/apps/web/src/services/userService.ts
+检查导入: @test/shared/types
+跳过非workspace导入: @test/shared/types
+检查导入: local-lib
+收集workspace导入: local-lib -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared
+无法找到模块 /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared 的入口文件
+模块 local-lib 导出: 
+提取到 0 个workspace导入
+开始收集workspace导入信息...
+跳过非workspace导入: @test/shared/types
+收集workspace导入: local-lib -> /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared
+无法找到模块 /Users/chenxufeng/Desktop/modular-code-analysis-util/packages/parser-agent/test-workspace-comprehensive/tools/shared 的入口文件
+模块 local-lib 导出: 
+总共收集到 0 个workspace导入
+提取到 0 个workspace内部调用
+注释: 扩展的用户服务
+  📥 导入 (0): []
+  📞 调用 (0): []
+  📡 事件 (0): []
+  💬 注释: 扩展的用户服务
+
+✅ 验证依赖分析正确性:
+  ✅ App.tsx 正确导入 @test/shared
+  ❌ App.tsx 缺少 @test/utils 导入
+  ✅ App.tsx 检测到函数调用
+  ❌ helpers.ts 缺少 @test/shared 导入
+
+📊 综合测试统计:
+📁 文件扫描: 8/8 (100%)
+🔍 依赖分析: 2/4 (50%)
+
+📊 实体类型分布:
+  function: 11个
+  variable: 5个
+  class: 4个
+  component: 4个
+
+📦 Workspace 包统计:
+  shared: 6个实体
+  utils: 7个实体
+  vue-components: 1个实体
+  apps/web: 4个实体
+  libs/database/orm: 3个实体
+  tools/shared: 3个实体
+
+🎯 总体通过率: 83%
+✅ Workspace 功能基本正常，有少量问题。
+
+🔍 问题分析:
+🔍 依赖分析问题:
+  - 检查模块路径解析
+  - 验证workspace包名匹配
+  - 确认导入语句解析
+
+🧹 清理测试文件...
+✅ 清理完成

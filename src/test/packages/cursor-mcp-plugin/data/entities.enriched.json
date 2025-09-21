@@ -1,0 +1,3134 @@
+[
+  {
+    "id": "Function:vitest.config",
+    "type": "function",
+    "file": "../parser-agent/vitest.config.ts",
+    "loc": {
+      "start": 4,
+      "end": 14
+    },
+    "rawName": "default",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "Vitest测试配置函数，设置测试包含路径、全局变量、Node环境和覆盖率报告选项，用于parser-agent包的测试环境配置",
+    "tags": [
+      "Vitest配置",
+      "测试环境",
+      "代码覆盖率",
+      "Node环境",
+      "parser-agent测试"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Function:extractAllEntities",
+    "type": "function",
+    "file": "../parser-agent/src/fileWalker.ts",
+    "loc": {
+      "start": 626,
+      "end": 719
+    },
+    "rawName": "extractAllEntities",
+    "isDDD": false,
+    "IMPORTS": [
+      "Component:VueExtractor",
+      "Component:TSXExtractor",
+      "Component:FunctionExtractor"
+    ],
+    "CALLS": [
+      "Component:VueExtractor.extract",
+      "Component:TSXExtractor.extract",
+      "Component:FunctionExtractor.extract"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "从项目目录中扫描并提取所有代码实体，支持Vue、TSX和TS文件，通过并行处理和缓存机制优化性能，可识别组件、函数等不同类型的实体。",
+    "tags": [
+      "代码解析",
+      "实体提取",
+      "文件扫描",
+      "并行处理",
+      "多格式支持"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Function:searchCodeEntities",
+    "type": "function",
+    "file": "../parser-agent/src/rag-inline-tool.ts",
+    "loc": {
+      "start": 1758,
+      "end": 1766
+    },
+    "rawName": "searchCodeEntities",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:SimpleLogger",
+      "Class:DB",
+      "Function:dbConfig"
+    ],
+    "CALLS": [
+      "Class:DB.isDBConnected",
+      "Class:DB.initDB",
+      "Class:DB.searchFlowNode"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "简便的函数接口，用于快速调用搜索功能",
+    "summary": "函数: searchCodeEntities",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:getRelatedCodeEntities",
+    "type": "function",
+    "file": "../parser-agent/src/rag-inline-tool.ts",
+    "loc": {
+      "start": 1769,
+      "end": 1777
+    },
+    "rawName": "getRelatedCodeEntities",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:SimpleLogger",
+      "Class:DB",
+      "Function:dbConfig"
+    ],
+    "CALLS": [
+      "Class:DB.isDBConnected",
+      "Class:DB.initDB",
+      "Class:DB.searchFlowNode"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "简便的函数接口，用于快速调用关系查询功能",
+    "summary": "函数: getRelatedCodeEntities",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Component:RagInlineTool",
+    "type": "class",
+    "file": "../parser-agent/src/rag-inline-tool.ts",
+    "loc": {
+      "start": 76,
+      "end": 1755
+    },
+    "rawName": "RagInlineTool",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:SimpleLogger",
+      "Class:DB",
+      "Function:dbConfig"
+    ],
+    "CALLS": [
+      "Class:DB.isDBConnected",
+      "Class:DB.initDB",
+      "Class:DB.searchFlowNode"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "RAG（检索增强生成）内联工具类\n用于代码实体的智能检索和关系分析",
+    "summary": "函数: RagInlineTool",
+    "tags": [
+      "class",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Variable:DEFAULT_ENRICHMENT_CONFIG",
+    "type": "variable",
+    "file": "../parser-agent/src/enrichment/config.ts",
+    "loc": {
+      "start": 8,
+      "end": 14
+    },
+    "rawName": "DEFAULT_ENRICHMENT_CONFIG",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "定义代码实体富集处理的默认配置，包括并发数、重试次数、重试延迟、输入文件路径和输出文件路径，用于控制实体富集过程的行为",
+    "tags": [
+      "配置管理",
+      "实体富集",
+      "默认参数",
+      "并发控制",
+      "文件处理"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Function:getLLMConfig",
+    "type": "function",
+    "file": "../parser-agent/src/enrichment/config.ts",
+    "loc": {
+      "start": 16,
+      "end": 22
+    },
+    "rawName": "getLLMConfig",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "获取LLM配置信息的函数，从环境变量中读取Anthropic API密钥、模型名称和最大并发数，用于配置大语言模型的调用参数",
+    "tags": [
+      "LLM配置",
+      "Anthropic API",
+      "环境变量",
+      "配置管理",
+      "Claude模型"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Function:getEnrichmentConfig",
+    "type": "function",
+    "file": "../parser-agent/src/enrichment/config.ts",
+    "loc": {
+      "start": 24,
+      "end": 29
+    },
+    "rawName": "getEnrichmentConfig",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "获取代码实体富集配置，通过合并默认配置和自定义配置，控制并发数、重试次数、延迟时间以及输入输出文件路径等参数",
+    "tags": [
+      "配置管理",
+      "代码富集",
+      "参数合并",
+      "默认配置",
+      "实体处理"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Function:resolveFilePath",
+    "type": "function",
+    "file": "../parser-agent/src/enrichment/config.ts",
+    "loc": {
+      "start": 31,
+      "end": 38
+    },
+    "rawName": "resolveFilePath",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "解析文件路径，将相对路径转换为绝对路径。如果提供的路径已经是绝对路径则直接返回，否则基于指定的基础路径或当前工作目录进行解析。",
+    "tags": [
+      "路径解析",
+      "文件处理",
+      "路径转换",
+      "工具函数",
+      "路径标准化"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Function:enrichEntities",
+    "type": "function",
+    "file": "../parser-agent/src/enrichment/index.ts",
+    "loc": {
+      "start": 28,
+      "end": 42
+    },
+    "rawName": "enrichEntities",
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:EnrichmentOrchestrator"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "便捷函数，用于处理指定实体文件，创建EnrichmentOrchestrator实例并执行实体丰富化流程，支持自定义输入输出路径、项目根目录、配置和完整实体列表。",
+    "tags": [
+      "实体丰富化",
+      "代码分析",
+      "数据处理",
+      "配置管理",
+      "文件处理"
+    ],
+    "ANNOTATION": "便捷函数：处理指定实体文件\n@param inputPath 输入文件路径\n@param outputPath 输出文件路径\n@param rootDir 项目根目录\n@param config 自定义配置\n@param fullEntities 完整的实体列表（可选）"
+  },
+  {
+    "id": "Function:runCli",
+    "type": "function",
+    "file": "../parser-agent/src/enrichment/index.ts",
+    "loc": {
+      "start": 47,
+      "end": 67
+    },
+    "rawName": "runCli",
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:EnrichmentOrchestrator"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "命令行入口函数，处理命令行参数并启动Enrichment Agent流程，负责解析输入/输出文件路径和根目录参数，执行实体丰富化处理并输出结果状态。",
+    "tags": [
+      "命令行入口",
+      "实体丰富化",
+      "参数解析",
+      "错误处理",
+      "流程控制"
+    ],
+    "ANNOTATION": "命令行入口"
+  },
+  {
+    "id": "Component:LLMLabeler",
+    "type": "component",
+    "file": "../parser-agent/src/enrichment/llmLabeler.ts",
+    "loc": {
+      "start": 57,
+      "end": 259
+    },
+    "rawName": "LLMLabeler",
+    "isDDD": false,
+    "IMPORTS": [
+      "Function:getLLMConfig",
+      "Function:createTools",
+      "Function:createToolsMap"
+    ],
+    "CALLS": [
+      "Function:getLLMConfig",
+      "Function:createTools",
+      "Function:createToolsMap"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "LLM标签生成器，使用Claude模型为代码实体生成业务摘要和标签，支持速率限制控制和错误处理，可通过工具读取相关文件以增强理解",
+    "tags": [
+      "LLM标签生成",
+      "代码理解",
+      "Claude模型",
+      "速率限制",
+      "静态分析"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Function:loadEntities",
+    "type": "function",
+    "file": "../parser-agent/src/enrichment/loader.ts",
+    "loc": {
+      "start": 19,
+      "end": 31
+    },
+    "rawName": "loadEntities",
+    "isDDD": false,
+    "IMPORTS": [
+      "Function:resolveFilePath"
+    ],
+    "CALLS": [
+      "Function:resolveFilePath"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "从JSON文件异步加载实体列表，支持相对路径和绝对路径，处理文件读取和解析过程，并在控制台输出加载结果或错误信息。",
+    "tags": [
+      "实体加载",
+      "JSON解析",
+      "文件读取",
+      "异步处理",
+      "错误处理"
+    ],
+    "ANNOTATION": "从JSON文件加载实体列表\n@param filePath 实体JSON文件路径\n@param rootDir 可选的根目录，用于解析相对路径\n@returns 实体列表"
+  },
+  {
+    "id": "Function:validateEntities",
+    "type": "function",
+    "file": "../parser-agent/src/enrichment/loader.ts",
+    "loc": {
+      "start": 38,
+      "end": 59
+    },
+    "rawName": "validateEntities",
+    "isDDD": false,
+    "IMPORTS": [
+      "Function:resolveFilePath"
+    ],
+    "CALLS": [
+      "Function:resolveFilePath"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "验证实体列表中的每个实体是否包含必要字段(id、type、file、loc、rawName)，过滤掉不符合要求的实体，并在控制台输出警告信息。",
+    "tags": [
+      "实体验证",
+      "数据过滤",
+      "字段校验",
+      "数据完整性",
+      "实体处理"
+    ],
+    "ANNOTATION": "验证实体列表，确保包含所有必要的字段\n@param entities 要验证的实体列表\n@returns 过滤后的有效实体列表"
+  },
+  {
+    "id": "Class:EnrichmentOrchestrator",
+    "type": "class",
+    "file": "../parser-agent/src/enrichment/orchestrator.ts",
+    "loc": {
+      "start": 15,
+      "end": 135
+    },
+    "rawName": "EnrichmentOrchestrator",
+    "isDDD": false,
+    "IMPORTS": [
+      "Function:getEnrichmentConfig",
+      "Function:loadEntities",
+      "Function:validateEntities",
+      "Component:StaticAnalyzer",
+      "Component:LLMLabeler",
+      "Function:saveEnrichedEntities"
+    ],
+    "CALLS": [
+      "Function:getEnrichmentConfig",
+      "Function:saveEnrichedEntities",
+      "Function:loadEntities",
+      "Function:validateEntities"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "编排实体丰富化流程，协调实体加载、静态分析、LLM标注和结果持久化，支持并发处理和错误重试机制，提升代码实体的语义理解。",
+    "tags": [
+      "流程编排",
+      "实体丰富化",
+      "静态分析",
+      "LLM标注",
+      "并发处理"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Function:saveEnrichedEntities",
+    "type": "function",
+    "file": "../parser-agent/src/enrichment/persistence.ts",
+    "loc": {
+      "start": 20,
+      "end": 50
+    },
+    "rawName": "saveEnrichedEntities",
+    "isDDD": false,
+    "IMPORTS": [
+      "Function:resolveFilePath"
+    ],
+    "CALLS": [
+      "Function:resolveFilePath"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "将丰富化后的实体数组保存到JSON文件，包括创建必要的目录、格式化实体数据并写入文件，支持相对路径和绝对路径的输出位置指定。",
+    "tags": [
+      "数据持久化",
+      "JSON导出",
+      "实体格式化",
+      "文件操作",
+      "路径解析"
+    ],
+    "ANNOTATION": "将丰富化后的实体保存到JSON文件\n@param entities 丰富化后的实体数组\n@param outputPath 输出文件路径\n@param rootDir 可选的根目录，用于解析相对路径"
+  },
+  {
+    "id": "Component:StaticAnalyzer",
+    "type": "component",
+    "file": "../parser-agent/src/enrichment/staticAnalyzer.ts",
+    "loc": {
+      "start": 18,
+      "end": 1496
+    },
+    "rawName": "StaticAnalyzer",
+    "isDDD": false,
+    "IMPORTS": [
+      "Component:EntityIdGenerator"
+    ],
+    "CALLS": [
+      "Component:EntityIdGenerator.initEntityMap",
+      "Component:EntityIdGenerator.generateIdByLookup"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "静态代码分析组件，用于分析代码实体的导入、调用、事件发送等关系，支持Vue、TS、TSX文件，并提取注释信息，为代码实体生成静态分析结果。",
+    "tags": [
+      "静态分析",
+      "代码关系提取",
+      "多文件格式支持",
+      "依赖分析",
+      "注释提取"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Function:createReadFileTool",
+    "type": "function",
+    "file": "../parser-agent/src/enrichment/tools.ts",
+    "loc": {
+      "start": 23,
+      "end": 45
+    },
+    "rawName": "createReadFileTool",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "创建一个用于读取文件内容的工具函数，接收项目根目录作为参数，返回一个包含名称、描述、参数模式和执行逻辑的工具对象，用于解析和读取指定路径的文件。",
+    "tags": [
+      "文件读取",
+      "工具函数",
+      "项目辅助",
+      "文件操作",
+      "错误处理"
+    ],
+    "ANNOTATION": "创建读取文件工具\n@param projectRoot 项目根目录"
+  },
+  {
+    "id": "Function:createTools",
+    "type": "function",
+    "file": "../parser-agent/src/enrichment/tools.ts",
+    "loc": {
+      "start": 51,
+      "end": 55
+    },
+    "rawName": "createTools",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "根据提供的项目根目录创建并返回可用工具数组，目前仅包含读取文件工具，用于支持代码解析和分析过程中的文件访问功能。",
+    "tags": [
+      "工具创建",
+      "文件读取",
+      "代码解析辅助",
+      "项目分析",
+      "工具集合"
+    ],
+    "ANNOTATION": "创建所有可用工具\n@param projectRoot 项目根目录"
+  },
+  {
+    "id": "Function:createToolsMap",
+    "type": "function",
+    "file": "../parser-agent/src/enrichment/tools.ts",
+    "loc": {
+      "start": 60,
+      "end": 69
+    },
+    "rawName": "createToolsMap",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "将工具数组转换为名称到工具实例的映射对象，每个工具通过ai库的tool函数包装，便于在AI应用中注册和使用自定义工具",
+    "tags": [
+      "工具映射",
+      "AI工具",
+      "函数转换",
+      "工具注册",
+      "工具管理"
+    ],
+    "ANNOTATION": "@param tools 工具数组"
+  },
+  {
+    "id": "Variable:readFileSchema",
+    "type": "variable",
+    "file": "../parser-agent/src/enrichment/tools.ts",
+    "loc": {
+      "start": 7,
+      "end": 9
+    },
+    "rawName": "readFileSchema",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "使用Zod定义的读取文件工具参数模式，包含file_path字段，用于验证和描述读取文件操作所需的文件路径参数",
+    "tags": [
+      "Zod模式",
+      "文件读取",
+      "参数验证",
+      "工具定义",
+      "路径参数"
+    ],
+    "ANNOTATION": "读取文件工具的参数schema"
+  },
+  {
+    "id": "Component:EntityIdGenerator",
+    "type": "component",
+    "file": "../parser-agent/src/extractors/EntityIdGenerator.ts",
+    "loc": {
+      "start": 19,
+      "end": 463
+    },
+    "rawName": "EntityIdGenerator",
+    "isDDD": false,
+    "IMPORTS": [
+      "Component:TypeUtils",
+      "Function:getTSProjectManager"
+    ],
+    "CALLS": [
+      "Component:TypeUtils.isComponentFunction",
+      "Component:TypeUtils.isComponentClass",
+      "Component:TypeUtils.getClassTypeInfo",
+      "Component:TypeUtils.isComponentVariable",
+      "Component:TypeUtils.isFunctionVariable",
+      "Component:TypeUtils.isConstantVariable",
+      "Component:TypeUtils.getEntityTypeInfo",
+      "Function:getTSProjectManager"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "通用实体ID生成器，为代码分析工具提供一致的ID生成逻辑，能够根据代码结构和命名规范自动识别组件、函数、类等实体类型，并生成规范化的唯一标识符。",
+    "tags": [
+      "实体识别",
+      "代码分析",
+      "ID生成",
+      "类型推断",
+      "静态分析"
+    ],
+    "ANNOTATION": "通用实体ID生成器\n为所有extractor和StaticAnalyzer提供一致的ID生成逻辑"
+  },
+  {
+    "id": "Component:FunctionExtractor",
+    "type": "component",
+    "file": "../parser-agent/src/extractors/FunctionExtractor.ts",
+    "loc": {
+      "start": 19,
+      "end": 314
+    },
+    "rawName": "FunctionExtractor",
+    "isDDD": false,
+    "IMPORTS": [
+      "Component:TypeUtils",
+      "Function:getTSProjectManager"
+    ],
+    "CALLS": [
+      "Function:getTSProjectManager",
+      "Component:TypeUtils.isComponentFunction",
+      "Component:TypeUtils.isComponentClass",
+      "Component:TypeUtils.getClassTypeInfo",
+      "Component:TypeUtils.isComponentVariable",
+      "Component:TypeUtils.isFunctionVariable",
+      "Component:TypeUtils.isConstantVariable",
+      "Component:TypeUtils.getEntityTypeInfo"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "从TypeScript源文件中提取函数、类和变量等实体，识别组件、函数和常量，支持缓存机制以提高性能，为代码分析提供基础数据。",
+    "tags": [
+      "代码提取",
+      "TypeScript解析",
+      "组件识别",
+      "实体分类",
+      "缓存优化"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Function:getPerformanceConfig",
+    "type": "function",
+    "file": "../parser-agent/src/extractors/PerformanceConfig.ts",
+    "loc": {
+      "start": 72,
+      "end": 80
+    },
+    "rawName": "getPerformanceConfig",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "根据当前环境（development、production、test）获取相应的性能配置参数，包括缓存策略、并行处理和日志监控等设置，未指定环境时默认使用development配置。",
+    "tags": [
+      "性能配置",
+      "环境适配",
+      "缓存管理",
+      "资源优化",
+      "配置获取"
+    ],
+    "ANNOTATION": "获取当前环境的性能配置"
+  },
+  {
+    "id": "Class:PerformanceMonitor",
+    "type": "class",
+    "file": "../parser-agent/src/extractors/PerformanceConfig.ts",
+    "loc": {
+      "start": 85,
+      "end": 161
+    },
+    "rawName": "PerformanceMonitor",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "性能监控工具，用于记录代码执行过程中的时间检查点，计算执行时间，并生成包含总时间和各检查点详情的性能报告，支持报告打印功能。",
+    "tags": [
+      "性能监控",
+      "时间检查点",
+      "性能报告",
+      "执行时间统计",
+      "调试工具"
+    ],
+    "ANNOTATION": "性能监控器"
+  },
+  {
+    "id": "Class:CacheManager",
+    "type": "class",
+    "file": "../parser-agent/src/extractors/PerformanceConfig.ts",
+    "loc": {
+      "start": 177,
+      "end": 273
+    },
+    "rawName": "CacheManager",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "通用缓存管理器，提供键值对存储、自动清理和统计功能，支持缓存项大小估算、基于时间戳的清理策略和命中率统计，用于优化性能和资源使用",
+    "tags": [
+      "缓存管理",
+      "性能优化",
+      "资源控制",
+      "键值存储",
+      "统计监控"
+    ],
+    "ANNOTATION": "通用缓存管理器"
+  },
+  {
+    "id": "Variable:DEFAULT_PERFORMANCE_CONFIG",
+    "type": "variable",
+    "file": "../parser-agent/src/extractors/PerformanceConfig.ts",
+    "loc": {
+      "start": 25,
+      "end": 39
+    },
+    "rawName": "DEFAULT_PERFORMANCE_CONFIG",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "定义了代码解析器的默认性能配置，包括缓存管理、并行处理和监控日志等参数，为提取器提供统一的性能优化策略和资源管理方案。",
+    "tags": [
+      "性能配置",
+      "缓存管理",
+      "并行处理",
+      "监控日志",
+      "资源优化"
+    ],
+    "ANNOTATION": "默认性能配置"
+  },
+  {
+    "id": "Variable:PERFORMANCE_CONFIGS",
+    "type": "variable",
+    "file": "../parser-agent/src/extractors/PerformanceConfig.ts",
+    "loc": {
+      "start": 44,
+      "end": 67
+    },
+    "rawName": "PERFORMANCE_CONFIGS",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "为不同环境（开发、生产、测试）提供定制化的性能配置参数，包括缓存策略、并行处理能力、日志级别等，用于优化代码提取器的运行效率和资源使用",
+    "tags": [
+      "性能配置",
+      "环境特定",
+      "缓存管理",
+      "并行处理",
+      "资源优化"
+    ],
+    "ANNOTATION": "环境特定配置"
+  },
+  {
+    "id": "Function:getTSProjectManager",
+    "type": "function",
+    "file": "../parser-agent/src/extractors/TSProjectManager.ts",
+    "loc": {
+      "start": 267,
+      "end": 269
+    },
+    "rawName": "getTSProjectManager",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "提供获取TSProjectManager单例实例的便捷函数，用于统一管理TypeScript解析过程中的Project实例和缓存机制，简化TypeScript代码分析工具的使用",
+    "tags": [
+      "TypeScript解析",
+      "单例模式",
+      "缓存管理",
+      "代码分析",
+      "项目管理"
+    ],
+    "ANNOTATION": "获取全局 TSProjectManager 实例的便捷函数"
+  },
+  {
+    "id": "Function:clearTSCache",
+    "type": "function",
+    "file": "../parser-agent/src/extractors/TSProjectManager.ts",
+    "loc": {
+      "start": 274,
+      "end": 276
+    },
+    "rawName": "clearTSCache",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "清理TypeScript项目管理器中的所有缓存，包括源文件缓存、提取缓存和项目中的所有源文件，是TSProjectManager单例实例缓存管理的便捷函数",
+    "tags": [
+      "缓存清理",
+      "TypeScript解析",
+      "性能优化",
+      "内存管理",
+      "项目管理"
+    ],
+    "ANNOTATION": "清理全局缓存的便捷函数"
+  },
+  {
+    "id": "Class:TSProjectManager",
+    "type": "class",
+    "file": "../parser-agent/src/extractors/TSProjectManager.ts",
+    "loc": {
+      "start": 9,
+      "end": 262
+    },
+    "rawName": "TSProjectManager",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "TypeScript项目管理器，提供单例模式的ts-morph Project实例，实现源文件和提取结果的多层缓存机制，支持自动缓存清理，适用于所有TypeScript解析提取器",
+    "tags": [
+      "TypeScript解析",
+      "缓存管理",
+      "单例模式",
+      "项目管理",
+      "源文件处理"
+    ],
+    "ANNOTATION": "通用 TypeScript 项目管理器\n提供单例模式的 ts-morph Project 实例和多层缓存机制\n适用于所有需要 TypeScript 解析的提取器"
+  },
+  {
+    "id": "Component:TSXExtractor",
+    "type": "component",
+    "file": "../parser-agent/src/extractors/TSXExtractor.ts",
+    "loc": {
+      "start": 19,
+      "end": 350
+    },
+    "rawName": "TSXExtractor",
+    "isDDD": false,
+    "IMPORTS": [
+      "Component:TypeUtils",
+      "Function:getTSProjectManager"
+    ],
+    "CALLS": [
+      "Function:getTSProjectManager",
+      "Component:TypeUtils.isComponentFunction",
+      "Component:TypeUtils.isComponentClass",
+      "Component:TypeUtils.getClassTypeInfo",
+      "Component:TypeUtils.isComponentVariable",
+      "Component:TypeUtils.isFunctionVariable",
+      "Component:TypeUtils.isConstantVariable",
+      "Component:TypeUtils.getEntityTypeInfo"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "TSXExtractor是一个用于从TypeScript/TSX文件中提取React组件、函数、类和变量的工具，能够识别不同类型的导出实体，并支持缓存以提高性能。",
+    "tags": [
+      "React组件提取",
+      "TypeScript解析",
+      "代码实体识别",
+      "缓存优化",
+      "静态分析"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Component:TypeUtils",
+    "type": "component",
+    "file": "../parser-agent/src/extractors/TypeUtils.ts",
+    "loc": {
+      "start": 7,
+      "end": 135
+    },
+    "rawName": "TypeUtils",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "提供一致的类型判断逻辑给所有提取器使用，包括判断函数、类、变量是否为组件，以及识别函数变量和常量，并根据判断结果获取实体类型信息。",
+    "tags": [
+      "类型判断",
+      "组件识别",
+      "代码提取",
+      "静态分析",
+      "TS-Morph"
+    ],
+    "ANNOTATION": "公共的类型判断工具类\n提供一致的类型判断逻辑给所有提取器使用"
+  },
+  {
+    "id": "Component:VueExtractor",
+    "type": "component",
+    "file": "../parser-agent/src/extractors/VueExtractor.ts",
+    "loc": {
+      "start": 7,
+      "end": 73
+    },
+    "rawName": "VueExtractor",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "Vue文件解析器，用于从Vue单文件组件中提取组件实体信息，支持普通script和setup语法，识别组件默认导出和defineComponent调用，返回组件实体数据。",
+    "tags": [
+      "Vue解析",
+      "组件提取",
+      "SFC分析",
+      "代码解析",
+      "元数据提取"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Class:SimpleLogger",
+    "type": "class",
+    "file": "../shared-utils/src/simple-logger.ts",
+    "loc": {
+      "start": 7,
+      "end": 61
+    },
+    "rawName": "SimpleLogger",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "文件日志工具类，支持按日期记录INFO、WARN、ERROR级别的日志，可通过环境变量RAG_TOOL_DEBUG启用，日志存储在项目根目录下的logs/rag-tool文件夹中。",
+    "tags": [
+      "日志工具",
+      "文件日志",
+      "调试工具",
+      "RAG工具辅助",
+      "日志级别"
+    ],
+    "ANNOTATION": "简单的文件日志工具类"
+  },
+  {
+    "id": "Function:run",
+    "type": "function",
+    "file": "src/index.ts",
+    "loc": {
+      "start": 293,
+      "end": 301
+    },
+    "rawName": "run",
+    "isWorkspace": false,
+    "isDDD": false,
+    "IMPORTS": [
+      "Variable:serverConfig",
+      "Variable:TOOL_PARAMS",
+      "Variable:TOOL_NAMES",
+      "Function:getFullToolDescription",
+      "Component:StartAnalysisHandler",
+      "Component:CoreComponentHandler",
+      "Component:ModifyEntityHandler",
+      "Component:GeneratePromptHandler",
+      "Component:QuickAnalysisHandler",
+      "Class:EntityFileStatusHandler",
+      "Variable:multiWorkspaceManager"
+    ],
+    "CALLS": [
+      "Variable:multiWorkspaceManager.hasAnyWorkspace",
+      "Variable:multiWorkspaceManager.getAvailableWorkspaces",
+      "Function:getFullToolDescription",
+      "Variable:multiWorkspaceManager.disposeAll"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "导出 run 函数供 main.ts 调用",
+    "summary": "初始化并启动代码分析服务器，创建CodeAnalysisServer实例并调用start方法，处理可能的错误并在失败时退出进程，作为应用程序的主入口点。",
+    "tags": [
+      "服务器启动",
+      "错误处理",
+      "代码分析",
+      "入口函数",
+      "MCP服务"
+    ]
+  },
+  {
+    "id": "Variable:serverConfig",
+    "type": "variable",
+    "file": "src/config/server-config.ts",
+    "loc": {
+      "start": 4,
+      "end": 8
+    },
+    "rawName": "serverConfig",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "服务器配置对象，包含应用名称、版本信息和实体文件路径，用于设置服务器基本参数，支持通过环境变量自定义配置",
+    "tags": [
+      "服务器配置",
+      "环境变量",
+      "应用信息",
+      "文件路径",
+      "配置管理"
+    ],
+    "ANNOTATION": "服务器配置"
+  },
+  {
+    "id": "Variable:toolTriggers",
+    "type": "variable",
+    "file": "src/config/server-config.ts",
+    "loc": {
+      "start": 11,
+      "end": 21
+    },
+    "rawName": "toolTriggers",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "定义工具触发条件配置，包含优先级、默认状态和匹配模式，用于识别与需求、功能、修改、页面等相关的分析请求，触发相应的分析工具",
+    "tags": [
+      "工具触发",
+      "模式匹配",
+      "需求分析",
+      "代码分析",
+      "配置项"
+    ],
+    "ANNOTATION": "工具触发条件配置"
+  },
+  {
+    "id": "Variable:conversationService",
+    "type": "variable",
+    "file": "src/services/conversation-service.ts",
+    "loc": {
+      "start": 26,
+      "end": 26
+    },
+    "rawName": "conversationService",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "会话服务单例，管理用户会话状态，提供获取、设置、更新和删除会话的功能，存储包含搜索结果、选定实体和生成提示等信息的会话状态",
+    "tags": [
+      "会话管理",
+      "状态存储",
+      "单例服务",
+      "用户会话",
+      "数据缓存"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Variable:TOOL_PARAMS",
+    "type": "variable",
+    "file": "src/tools/params.ts",
+    "loc": {
+      "start": 3,
+      "end": 76
+    },
+    "rawName": "TOOL_PARAMS",
+    "isWorkspace": false,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "summary": "定义各种代码分析工具的参数结构和验证规则，包括开始分析、选择核心组件、修改实体选择、生成代码提示词、快速分析和实体文件状态管理等功能的参数配置。",
+    "tags": [
+      "参数配置",
+      "代码分析工具",
+      "Zod验证",
+      "工具参数",
+      "API接口定义"
+    ]
+  },
+  {
+    "id": "Variable:TOOL_NAMES",
+    "type": "variable",
+    "file": "src/tools/params.ts",
+    "loc": {
+      "start": 78,
+      "end": 85
+    },
+    "rawName": "TOOL_NAMES",
+    "isWorkspace": false,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "summary": "定义了代码分析工具的名称常量，包括开始分析、选择核心组件、修改实体选择、生成代码提示词、快速分析和实体文件状态等功能的标识符。",
+    "tags": [
+      "工具名称",
+      "代码分析",
+      "常量定义",
+      "功能标识符",
+      "开发工具"
+    ]
+  },
+  {
+    "id": "Variable:TOOL_DESCRIPTIONS",
+    "type": "variable",
+    "file": "src/tools/params.ts",
+    "loc": {
+      "start": 87,
+      "end": 100
+    },
+    "rawName": "TOOL_DESCRIPTIONS",
+    "isWorkspace": false,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "summary": "函数: TOOL_DESCRIPTIONS",
+    "tags": [
+      "variable"
+    ]
+  },
+  {
+    "id": "Variable:TOOL_USAGE_HINTS",
+    "type": "variable",
+    "file": "src/tools/params.ts",
+    "loc": {
+      "start": 103,
+      "end": 116
+    },
+    "rawName": "TOOL_USAGE_HINTS",
+    "isWorkspace": false,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "工具使用时机说明 - 用于在工具注册时提供额外的使用指导",
+    "summary": "定义各种代码分析工具的使用时机指导，包括分析入口、组件选择、实体控制、代码生成、快速分析和文件管理等场景，用于工具注册时提供使用建议。",
+    "tags": [
+      "工具使用指南",
+      "代码分析",
+      "使用时机",
+      "用户引导",
+      "工具注册"
+    ]
+  },
+  {
+    "id": "Function:getFullToolDescription",
+    "type": "function",
+    "file": "src/tools/params.ts",
+    "loc": {
+      "start": 119,
+      "end": 123
+    },
+    "rawName": "getFullToolDescription",
+    "isWorkspace": false,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "完整的工具描述 - 包含基础描述和使用时机",
+    "summary": "根据工具名称返回完整工具描述，将基础描述和使用时机说明合并为一个字符串，用于向用户提供全面的工具使用指导。",
+    "tags": [
+      "工具描述",
+      "用户指导",
+      "功能说明",
+      "工具使用时机",
+      "文档生成"
+    ]
+  },
+  {
+    "id": "Component:generateCombinedPrompt",
+    "type": "component",
+    "file": "src/utils/entity-utils.ts",
+    "loc": {
+      "start": 4,
+      "end": 17
+    },
+    "rawName": "generateCombinedPrompt",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "合并搜索结果和二跳查询结果，生成包含源组件信息和相关度评分的Markdown格式提示文本，用于展示代码实体间的关联关系",
+    "tags": [
+      "提示生成",
+      "搜索结果合并",
+      "Markdown格式化",
+      "代码关联分析",
+      "相关度展示"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Function:collectAllEntities",
+    "type": "function",
+    "file": "src/utils/entity-utils.ts",
+    "loc": {
+      "start": 19,
+      "end": 27
+    },
+    "rawName": "collectAllEntities",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "从搜索结果集合中提取所有实体，包括搜索实体本身和相关实体（导入、调用、模板和相似实体），并将它们去重后返回为数组。",
+    "tags": [
+      "实体收集",
+      "数据处理",
+      "去重",
+      "搜索结果处理",
+      "代码分析"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Function:generateEntitySummary",
+    "type": "function",
+    "file": "src/utils/entity-utils.ts",
+    "loc": {
+      "start": 29,
+      "end": 92
+    },
+    "rawName": "generateEntitySummary",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "根据搜索结果生成实体关系摘要，将相关实体按导入、调用、模板和相似标签分类，并统计各类实体数量，最终生成格式化的Markdown文本展示",
+    "tags": [
+      "实体关系",
+      "数据分类",
+      "Markdown生成",
+      "代码分析",
+      "实体统计"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Function:enrichedToEntity",
+    "type": "function",
+    "file": "src/utils/entity-utils.ts",
+    "loc": {
+      "start": 97,
+      "end": 106
+    },
+    "rawName": "enrichedToEntity",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "将EnrichedEntity对象转换为Entity对象的工具函数，提取并映射关键属性如id、rawName、type、file、summary和tags，用于实体数据格式转换。",
+    "tags": [
+      "类型转换",
+      "实体处理",
+      "数据映射",
+      "工具函数"
+    ],
+    "ANNOTATION": "类型转换工具函数：将 EnrichedEntity 转换为 Entity"
+  },
+  {
+    "id": "Component:generateCodePrompt",
+    "type": "component",
+    "file": "src/utils/prompt-generator.ts",
+    "loc": {
+      "start": 10,
+      "end": 55
+    },
+    "rawName": "generateCodePrompt",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "构建AI代码生成提示词的函数，将用户需求、核心组件和相关实体整合成结构化提示，包含实现要求和上下文信息",
+    "tags": [
+      "提示词生成",
+      "代码生成",
+      "AI辅助开发",
+      "结构化提示",
+      "开发工具"
+    ],
+    "ANNOTATION": "生成代码提示词的辅助函数\n@param userInput 用户输入\n@param entities 实体列表\n@param additionalContext 额外上下文\n@returns 生成的代码提示词"
+  },
+  {
+    "id": "Class:BaseHandler",
+    "type": "class",
+    "file": "src/tools/handlers/base-handler.ts",
+    "loc": {
+      "start": 15,
+      "end": 46
+    },
+    "rawName": "BaseHandler",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "基础处理器类，为工具处理器提供通用功能，包括RAG工具集成和实体文件检查，用于代码分析过程中的基础操作支持",
+    "tags": [
+      "基础处理器",
+      "代码分析",
+      "RAG工具",
+      "实体文件检查",
+      "工具结果处理"
+    ],
+    "ANNOTATION": "基础处理器类，提供通用功能"
+  },
+  {
+    "id": "Component:CoreComponentHandler",
+    "type": "component",
+    "file": "src/tools/handlers/core-component-handler.ts",
+    "loc": {
+      "start": 6,
+      "end": 140
+    },
+    "rawName": "CoreComponentHandler",
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:BaseHandler",
+      "Function:enrichedToEntity",
+      "Variable:conversationService"
+    ],
+    "CALLS": [
+      "Variable:conversationService.getConversation",
+      "Function:enrichedToEntity",
+      "Variable:conversationService.updateConversation"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "处理核心组件选择和智能关联相关实体的组件，通过AI分析选择最相关的实体，更新会话状态，并提供下一步操作建议，支持代码提示词生成流程。",
+    "tags": [
+      "核心组件处理",
+      "智能关联",
+      "实体选择",
+      "代码提示词生成",
+      "会话状态管理"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Component:GeneratePromptHandler",
+    "type": "component",
+    "file": "src/tools/handlers/generate-prompt-handler.ts",
+    "loc": {
+      "start": 6,
+      "end": 142
+    },
+    "rawName": "GeneratePromptHandler",
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:BaseHandler",
+      "Component:generateCodePrompt",
+      "Variable:conversationService",
+      "Function:enrichedToEntity"
+    ],
+    "CALLS": [
+      "Variable:conversationService.getConversation",
+      "Function:enrichedToEntity",
+      "Component:generateCodePrompt",
+      "Variable:conversationService.updateConversation"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "处理生成代码提示词的工具，根据会话中的核心组件和相关实体，构建结构化的代码提示词，并更新会话状态，支持多种实体选择模式。",
+    "tags": [
+      "代码提示词生成",
+      "会话处理",
+      "实体分析",
+      "提示词构建",
+      "工具处理器"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Component:ModifyEntityHandler",
+    "type": "component",
+    "file": "src/tools/handlers/modify-entity-handler.ts",
+    "loc": {
+      "start": 6,
+      "end": 289
+    },
+    "rawName": "ModifyEntityHandler",
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:BaseHandler",
+      "Variable:conversationService",
+      "Function:enrichedToEntity"
+    ],
+    "CALLS": [
+      "Variable:conversationService.getConversation",
+      "Function:enrichedToEntity",
+      "Variable:conversationService.updateConversation"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "处理实体选择修改操作的组件，支持添加、移除、替换和清空实体，管理核心组件和相关实体的选择状态，并提供实体选择结果的可视化展示。",
+    "tags": [
+      "实体管理",
+      "组件选择",
+      "相关实体",
+      "核心组件",
+      "代码生成辅助"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Component:QuickAnalysisHandler",
+    "type": "component",
+    "file": "src/tools/handlers/quick-analysis-handler.ts",
+    "loc": {
+      "start": 6,
+      "end": 118
+    },
+    "rawName": "QuickAnalysisHandler",
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:BaseHandler",
+      "Variable:serverConfig",
+      "Component:generateCodePrompt",
+      "Function:enrichedToEntity"
+    ],
+    "CALLS": [
+      "Function:enrichedToEntity",
+      "Component:generateCodePrompt"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "快速分析处理器，根据用户输入搜索相关代码实体，选择核心组件和智能关联实体，生成代码提示词，支持用户进行快速代码分析和理解。",
+    "tags": [
+      "代码分析",
+      "智能搜索",
+      "提示词生成",
+      "实体关联",
+      "RAG工具"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Component:StartAnalysisHandler",
+    "type": "component",
+    "file": "src/tools/handlers/start-analysis-handler.ts",
+    "loc": {
+      "start": 6,
+      "end": 139
+    },
+    "rawName": "StartAnalysisHandler",
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:BaseHandler",
+      "Variable:serverConfig",
+      "Variable:conversationService"
+    ],
+    "CALLS": [
+      "Variable:conversationService.setConversation"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "处理代码分析启动流程的组件，通过RAG工具搜索相关实体，保存会话状态，并返回推荐的核心组件列表供用户选择后续操作方式。",
+    "tags": [
+      "代码分析",
+      "RAG搜索",
+      "会话管理",
+      "组件推荐",
+      "需求分析"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Class:MultiWorkspaceManager",
+    "type": "class",
+    "file": "src/utils/multi-workspace-utils.ts",
+    "loc": {
+      "start": 12,
+      "end": 273
+    },
+    "rawName": "MultiWorkspaceManager",
+    "isWorkspace": false,
+    "isDDD": false,
+    "IMPORTS": [
+      "Component:RagInlineTool",
+      "Component:EntityIdGenerator",
+      "Variable:serverConfig",
+      "Function:enrichedToEntity"
+    ],
+    "CALLS": [
+      "Function:enrichedToEntity"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "多workspace管理工具类\n负责处理多workspace环境下的实体加载、搜索和管理",
+    "summary": "函数: MultiWorkspaceManager",
+    "tags": [
+      "class",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Variable:multiWorkspaceManager",
+    "type": "variable",
+    "file": "src/utils/multi-workspace-utils.ts",
+    "loc": {
+      "start": 276,
+      "end": 276
+    },
+    "rawName": "multiWorkspaceManager",
+    "isWorkspace": false,
+    "isDDD": false,
+    "IMPORTS": [
+      "Component:RagInlineTool",
+      "Component:EntityIdGenerator",
+      "Variable:serverConfig",
+      "Function:enrichedToEntity"
+    ],
+    "CALLS": [
+      "Function:enrichedToEntity"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "单例实例",
+    "summary": "函数: multiWorkspaceManager",
+    "tags": [
+      "variable",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Class:DB",
+    "type": "class",
+    "file": "../parser-agent/src/db/index.ts",
+    "loc": {
+      "start": 17,
+      "end": 129
+    },
+    "rawName": "DB",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "summary": "数据库操作类，提供MySQL连接初始化、查询执行、连接关闭等功能，支持流程节点查询，使用Sequelize ORM框架实现数据库交互，具有连接池管理和错误处理能力。",
+    "tags": [
+      "数据库操作",
+      "MySQL连接",
+      "Sequelize ORM",
+      "流程节点查询",
+      "连接池管理"
+    ]
+  },
+  {
+    "id": "Function:escapeString",
+    "type": "function",
+    "file": "../graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 24,
+      "end": 37
+    },
+    "rawName": "escapeString",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:PreparedData",
+      "Class:FlowEntity",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Variable:FLOW_TAG",
+      "Function:createSchemaStatements",
+      "Function:getCurrentSpace"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:createSchemaStatements"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "转义字符串中的特殊字符, 并对超长字符串进行哈希",
+    "summary": "函数: escapeString",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:logQuery",
+    "type": "function",
+    "file": "../graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 39,
+      "end": 41
+    },
+    "rawName": "logQuery",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:PreparedData",
+      "Class:FlowEntity",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Variable:FLOW_TAG",
+      "Function:createSchemaStatements",
+      "Function:getCurrentSpace"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:createSchemaStatements"
+    ],
+    "EMITS": [],
+    "summary": "函数: logQuery",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:executeNgqlWithRetry",
+    "type": "function",
+    "file": "../graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 50,
+      "end": 105
+    },
+    "rawName": "executeNgqlWithRetry",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:PreparedData",
+      "Class:FlowEntity",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Variable:FLOW_TAG",
+      "Function:createSchemaStatements",
+      "Function:getCurrentSpace"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:createSchemaStatements"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "Executes a NGQL query with a retry mechanism.\n@param client The NebulaClient instance.\n@param query The NGQL query to execute.\n@param maxRetries The maximum number of retries.\n@param initialDelay The initial delay in milliseconds.",
+    "summary": "执行NGQL查询的重试机制函数，支持指定最大重试次数和初始延迟，能够识别并处理特定类型的数据库错误，采用指数退避策略进行重试。",
+    "tags": [
+      "数据库操作",
+      "错误重试",
+      "Nebula Graph",
+      "指数退避",
+      "容错机制"
+    ]
+  },
+  {
+    "id": "Function:buildGraph",
+    "type": "function",
+    "file": "../graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 114,
+      "end": 173
+    },
+    "rawName": "buildGraph",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:PreparedData",
+      "Class:FlowEntity",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Variable:FLOW_TAG",
+      "Function:createSchemaStatements",
+      "Function:getCurrentSpace"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:createSchemaStatements"
+    ],
+    "EMITS": [],
+    "summary": "函数: buildGraph",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:addOrUpdateFile",
+    "type": "function",
+    "file": "../graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 180,
+      "end": 199
+    },
+    "rawName": "addOrUpdateFile",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:PreparedData",
+      "Class:FlowEntity",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Variable:FLOW_TAG",
+      "Function:createSchemaStatements",
+      "Function:getCurrentSpace"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:createSchemaStatements"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "插入或更新文件节点\n@param file 文件实体\n@param client Nebula客户端",
+    "summary": "函数: addOrUpdateFile",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:addOrUpdateEntity",
+    "type": "function",
+    "file": "../graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 206,
+      "end": 256
+    },
+    "rawName": "addOrUpdateEntity",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:PreparedData",
+      "Class:FlowEntity",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Variable:FLOW_TAG",
+      "Function:createSchemaStatements",
+      "Function:getCurrentSpace"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:createSchemaStatements"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "插入或更新实体节点\n@param entity 实体\n@param client Nebula客户端",
+    "summary": "函数: addOrUpdateEntity",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:addOrUpdateFlow",
+    "type": "function",
+    "file": "../graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 263,
+      "end": 288
+    },
+    "rawName": "addOrUpdateFlow",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:PreparedData",
+      "Class:FlowEntity",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Variable:FLOW_TAG",
+      "Function:createSchemaStatements",
+      "Function:getCurrentSpace"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:createSchemaStatements"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "插入或更新流程节点\n@param flow 流程实体\n@param client Nebula客户端",
+    "summary": "函数: addOrUpdateFlow",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:createRelationships",
+    "type": "function",
+    "file": "../graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 298,
+      "end": 377
+    },
+    "rawName": "createRelationships",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:PreparedData",
+      "Class:FlowEntity",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Variable:FLOW_TAG",
+      "Function:createSchemaStatements",
+      "Function:getCurrentSpace"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:createSchemaStatements"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "批量创建关系\n@param entities 实体列表\n@param client Nebula客户端",
+    "summary": "批量创建实体间的关系，包括处理占位符节点、文件包含实体、实体间的导入调用关系，以及流程节点与实体和文件的包含关系",
+    "tags": [
+      "关系构建",
+      "图数据库",
+      "节点连接",
+      "批量处理",
+      "Nebula Graph"
+    ]
+  },
+  {
+    "id": "Function:clearNodeExistenceCache",
+    "type": "function",
+    "file": "../graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 652,
+      "end": 655
+    },
+    "rawName": "clearNodeExistenceCache",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:PreparedData",
+      "Class:FlowEntity",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Variable:FLOW_TAG",
+      "Function:createSchemaStatements",
+      "Function:getCurrentSpace"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:createSchemaStatements"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "清除节点存在性缓存（可选，用于重新开始时清理）",
+    "summary": "函数: clearNodeExistenceCache",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:prepareDataFromFile",
+    "type": "function",
+    "file": "../graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 704,
+      "end": 771
+    },
+    "rawName": "prepareDataFromFile",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:PreparedData",
+      "Class:FlowEntity",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Variable:FLOW_TAG",
+      "Function:createSchemaStatements",
+      "Function:getCurrentSpace"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:createSchemaStatements"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "数据准备器\n从 entities.enriched.json 文件加载和预处理数据\n从 entities.enriched.json 文件准备图构建所需的数据\n@param entitiesFilePath entities.enriched.json 文件的完整路径\n@returns 准备好的文件和实体数据",
+    "summary": "函数: prepareDataFromFile",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:buildGraphFromFile",
+    "type": "function",
+    "file": "../graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 1008,
+      "end": 1015
+    },
+    "rawName": "buildGraphFromFile",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:PreparedData",
+      "Class:FlowEntity",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Variable:FLOW_TAG",
+      "Function:createSchemaStatements",
+      "Function:getCurrentSpace"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:createSchemaStatements"
+    ],
+    "EMITS": [],
+    "summary": "函数: buildGraphFromFile",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:initializeGlobalClient",
+    "type": "function",
+    "file": "../graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 494,
+      "end": 498
+    },
+    "rawName": "initializeGlobalClient",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:NebulaClient"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "初始化全局客户端管理器",
+    "summary": "函数: initializeGlobalClient",
+    "tags": [
+      "function"
+    ]
+  },
+  {
+    "id": "Function:getGlobalClient",
+    "type": "function",
+    "file": "../graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 503,
+      "end": 505
+    },
+    "rawName": "getGlobalClient",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:NebulaClient"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "获取全局客户端实例",
+    "summary": "函数: getGlobalClient",
+    "tags": [
+      "function"
+    ]
+  },
+  {
+    "id": "Function:useSpace",
+    "type": "function",
+    "file": "../graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 510,
+      "end": 512
+    },
+    "rawName": "useSpace",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:NebulaClient"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "切换图空间",
+    "summary": "函数: useSpace",
+    "tags": [
+      "function"
+    ]
+  },
+  {
+    "id": "Function:executeQuery",
+    "type": "function",
+    "file": "../graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 517,
+      "end": 519
+    },
+    "rawName": "executeQuery",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:NebulaClient"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "执行查询",
+    "summary": "通过NebulaClient执行图数据库查询，支持自动重连和错误处理，是GlobalClientManager类中负责与Nebula Graph数据库交互执行NGQL查询的核心方法。",
+    "tags": [
+      "图数据库查询",
+      "Nebula Graph",
+      "NGQL",
+      "数据访问",
+      "客户端管理"
+    ]
+  },
+  {
+    "id": "Function:getClientStatus",
+    "type": "function",
+    "file": "../graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 524,
+      "end": 526
+    },
+    "rawName": "getClientStatus",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:NebulaClient"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "获取连接状态",
+    "summary": "获取Nebula Graph数据库客户端的连接状态信息，包括连接状态、当前图空间、会话ID、最后连接时间、重连尝试次数和健康状态",
+    "tags": [
+      "Nebula Graph",
+      "连接状态",
+      "客户端管理",
+      "数据库监控",
+      "图数据库"
+    ]
+  },
+  {
+    "id": "Function:reconnectClient",
+    "type": "function",
+    "file": "../graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 531,
+      "end": 533
+    },
+    "rawName": "reconnectClient",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:NebulaClient"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "手动重连",
+    "summary": "函数: reconnectClient",
+    "tags": [
+      "function"
+    ]
+  },
+  {
+    "id": "Function:destroyGlobalClient",
+    "type": "function",
+    "file": "../graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 538,
+      "end": 540
+    },
+    "rawName": "destroyGlobalClient",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:NebulaClient"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "销毁全局客户端连接",
+    "summary": "函数: destroyGlobalClient",
+    "tags": [
+      "function"
+    ]
+  },
+  {
+    "id": "Class:GlobalClientManager",
+    "type": "class",
+    "file": "../graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 38,
+      "end": 486
+    },
+    "rawName": "GlobalClientManager",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:NebulaClient"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "summary": "函数: GlobalClientManager",
+    "tags": [
+      "class"
+    ]
+  },
+  {
+    "id": "Variable:clientManager",
+    "type": "variable",
+    "file": "../graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 489,
+      "end": 489
+    },
+    "rawName": "clientManager",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:NebulaClient"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "保留便捷函数，但标记为可选",
+    "summary": "全局Nebula客户端管理器的实例，提供单例模式的客户端连接管理，可被多个应用共享使用，作为便捷访问GlobalClientManager功能的入口点",
+    "tags": [
+      "Nebula图数据库",
+      "客户端管理",
+      "单例模式",
+      "连接管理",
+      "便捷访问"
+    ]
+  },
+  {
+    "id": "Function:create",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "create",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "================================\nCREATE/UPDATE 操作\n================================\n创建实体（统一入口，引用builder功能）\n@param entity 文件实体或代码实体\n@param client 可选的Nebula客户端",
+    "summary": "函数: create",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:update",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "update",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "更新实体（统一入口，引用builder功能）\n@param entity 文件实体或代码实体\n@param client 可选的Nebula客户端",
+    "summary": "函数: update",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:read",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "read",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "读取实体（统一入口）\n@param id 实体ID\n@param entityType 实体类型，如果不提供则尝试自动识别\n@param client 可选的Nebula客户端",
+    "summary": "函数: read",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:remove",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "remove",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "删除实体（统一入口）\n@param id 实体ID\n@param entityType 实体类型，如果不提供则尝试自动识别\n@param client 可选的Nebula客户端",
+    "summary": "函数: remove",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:batchCreate",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "batchCreate",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "================================\n批量操作函数\n================================\n批量创建实体",
+    "summary": "函数: batchCreate",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:batchUpdate",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "batchUpdate",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "批量更新实体",
+    "summary": "函数: batchUpdate",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:batchRemove",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "batchRemove",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "批量删除实体",
+    "summary": "函数: batchRemove",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:getEntitiesInFile",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "getEntitiesInFile",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "================================\n查询辅助函数\n================================\n查询文件包含的所有实体",
+    "summary": "函数: getEntitiesInFile",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:queryEntities",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "queryEntities",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "根据条件查询实体",
+    "summary": "函数: queryEntities",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:getRelatedEntities",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "getRelatedEntities",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "根据实体ID和边类型查询相关实体\n@param entityId 源实体ID\n@param edgeType 边类型：'IMPORTS', 'CALLS', 'CONTAINS' 或 'ALL'\n@param direction 查询方向：'OUT'(出边), 'IN'(入边), 'BOTH'(双向)\n@param client 可选的Nebula客户端\n@returns 相关实体列表",
+    "summary": "函数: getRelatedEntities",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:getEntityDependencyChain",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "getEntityDependencyChain",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "查询实体的多跳关系（依赖链分析）\n@param entityId 源实体ID\n@param maxHops 最大跳数，默认为2\n@param edgeTypes 查询的边类型\n@param client 可选的Nebula客户端\n@returns 多跳关系结果",
+    "summary": "函数: getEntityDependencyChain",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:findRelationshipPath",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "findRelationshipPath",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "查询两个实体之间的关系路径\n@param sourceId 源实体ID\n@param targetId 目标实体ID\n@param maxHops 最大跳数，默认为3\n@param client 可选的Nebula客户端\n@returns 关系路径",
+    "summary": "函数: findRelationshipPath",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:getEntityImports",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "getEntityImports",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "获取实体的导入关系",
+    "summary": "函数: getEntityImports",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Function:getEntityCalls",
+    "type": "function",
+    "file": "../graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "getEntityCalls",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:FileEntity",
+      "Class:EnrichedEntity",
+      "Class:EntityType",
+      "Class:NebulaClient",
+      "Function:getDefaultClient",
+      "Variable:FILE_TAG",
+      "Variable:ENTITY_TAG",
+      "Variable:REL_CONTAINS",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_EMITS",
+      "Function:getCurrentSpace",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:buildGraph",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:executeNgqlWithRetry"
+    ],
+    "CALLS": [
+      "Function:getDefaultClient",
+      "Function:addOrUpdateFile",
+      "Function:addOrUpdateEntity",
+      "Function:createRelationships",
+      "Function:escapeString",
+      "Function:logQuery",
+      "Function:buildGraph"
+    ],
+    "EMITS": [],
+    "ANNOTATION": "获取实体的调用关系",
+    "summary": "函数: getEntityCalls",
+    "tags": [
+      "function",
+      "有API调用"
+    ]
+  },
+  {
+    "id": "Class:CodeRAG",
+    "type": "class",
+    "file": "../graph-builder-agent/src/rag.ts",
+    "loc": {
+      "start": 12,
+      "end": 298
+    },
+    "rawName": "CodeRAG",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [
+      "Class:NebulaClient",
+      "Variable:ENTITY_TAG",
+      "Variable:FILE_TAG",
+      "Variable:REL_IMPORTS",
+      "Variable:REL_CALLS",
+      "Variable:REL_CONTAINS"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "summary": "函数: CodeRAG",
+    "tags": [
+      "class"
+    ]
+  },
+  {
+    "id": "Function:getCurrentSpace",
+    "type": "function",
+    "file": "../graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 32,
+      "end": 41
+    },
+    "rawName": "getCurrentSpace",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "🎯 获取当前图空间名称（从全局客户端管理器）",
+    "summary": "函数: getCurrentSpace",
+    "tags": [
+      "function"
+    ]
+  },
+  {
+    "id": "Function:createSchemaStatements",
+    "type": "function",
+    "file": "../graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 47,
+      "end": 69
+    },
+    "rawName": "createSchemaStatements",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "创建图空间和Schema的NGQL语句\n@param spaceName 可选的图空间名称，默认使用当前设置的空间",
+    "summary": "函数: createSchemaStatements",
+    "tags": [
+      "function"
+    ]
+  },
+  {
+    "id": "Variable:DEFAULT_SPACE",
+    "type": "variable",
+    "file": "../graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 6,
+      "end": 6
+    },
+    "rawName": "DEFAULT_SPACE",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "Nebula Graph 数据库Schema配置\n默认图空间名称",
+    "summary": "函数: DEFAULT_SPACE",
+    "tags": [
+      "variable"
+    ]
+  },
+  {
+    "id": "Variable:FILE_TAG",
+    "type": "variable",
+    "file": "../graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 9,
+      "end": 9
+    },
+    "rawName": "FILE_TAG",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "文件标签",
+    "summary": "函数: FILE_TAG",
+    "tags": [
+      "variable"
+    ]
+  },
+  {
+    "id": "Variable:ENTITY_TAG",
+    "type": "variable",
+    "file": "../graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 12,
+      "end": 12
+    },
+    "rawName": "ENTITY_TAG",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "实体标签",
+    "summary": "函数: ENTITY_TAG",
+    "tags": [
+      "variable"
+    ]
+  },
+  {
+    "id": "Variable:FLOW_TAG",
+    "type": "variable",
+    "file": "../graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 15,
+      "end": 15
+    },
+    "rawName": "FLOW_TAG",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "flow类型",
+    "summary": "在Nebula Graph数据库Schema中定义的Flow标签名称，用于表示流程类型节点，存储流程描述和包含内容信息，是代码图谱中的一种节点类型",
+    "tags": [
+      "图数据库",
+      "Nebula Graph",
+      "流程标签",
+      "代码图谱",
+      "Schema定义"
+    ]
+  },
+  {
+    "id": "Variable:REL_CONTAINS",
+    "type": "variable",
+    "file": "../graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 18,
+      "end": 18
+    },
+    "rawName": "REL_CONTAINS",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "包含关系(文件包含实体)",
+    "summary": "表示Nebula Graph数据库中文件与实体之间的包含关系边类型，用于构建代码图谱中文件包含实体的关系模型",
+    "tags": [
+      "图数据库关系",
+      "代码结构",
+      "文件实体关系",
+      "Nebula Graph",
+      "边类型"
+    ]
+  },
+  {
+    "id": "Variable:REL_IMPORTS",
+    "type": "variable",
+    "file": "../graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 21,
+      "end": 21
+    },
+    "rawName": "REL_IMPORTS",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "导入关系",
+    "summary": "定义在Nebula Graph数据库Schema中表示代码实体之间导入关系的边类型名称，用于构建代码依赖图中的导入关系边",
+    "tags": [
+      "Nebula Graph",
+      "导入关系",
+      "代码依赖",
+      "图数据库",
+      "Schema定义"
+    ]
+  },
+  {
+    "id": "Variable:REL_CALLS",
+    "type": "variable",
+    "file": "../graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 24,
+      "end": 24
+    },
+    "rawName": "REL_CALLS",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "调用关系",
+    "summary": "表示代码实体之间的调用关系，用于在Nebula Graph数据库中定义边类型，构建代码调用关系图，是代码图谱中的核心关系类型之一",
+    "tags": [
+      "图数据库",
+      "调用关系",
+      "边类型",
+      "代码图谱",
+      "Nebula Graph"
+    ]
+  },
+  {
+    "id": "Variable:REL_EMITS",
+    "type": "variable",
+    "file": "../graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 27,
+      "end": 27
+    },
+    "rawName": "REL_EMITS",
+    "isWorkspace": true,
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "ANNOTATION": "发出关系",
+    "summary": "定义在Nebula Graph数据库Schema中表示发出关系的边类型名称，用于构建代码实体之间的事件发出关系，包含事件名称、类型和参数等属性",
+    "tags": [
+      "图数据库",
+      "关系边类型",
+      "事件发出",
+      "代码关系",
+      "Nebula Graph"
+    ]
+  }
+]

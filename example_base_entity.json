@@ -1,0 +1,31 @@
+{
+  "entities": [
+    {
+      "id": "src_components_Button_jsx_1024",
+      "file_path": "src/components/Button.jsx",
+      "description": "React component file",
+      "summary": "File contains 25 lines of code. Imports 1 modules: react. Exports: Button. Main function calls: useState, onClick, className.",
+      "imports": ["react"],
+      "calls": ["useState", "onClick", "className"],
+      "exports": ["Button"],
+      "file_type": "jsx",
+      "size": 1024,
+      "lines_count": 25
+    },
+    {
+      "id": "src_utils_helpers_js_512",
+      "file_path": "src/utils/helpers.js",
+      "description": "Utility/helper functions",
+      "summary": "File contains 40 lines of code. Imports 2 modules: lodash, moment. Exports: formatDate, validateEmail. Main function calls: isValid, format, test.",
+      "imports": ["lodash", "moment"],
+      "calls": ["isValid", "format", "test"],
+      "exports": ["formatDate", "validateEmail"],
+      "file_type": "js",
+      "size": 512,
+      "lines_count": 40
+    }
+  ],
+  "total_files": 2,
+  "total_size": 1536,
+  "analysis_timestamp": "2025-09-20T13:52:00.000Z"
+}

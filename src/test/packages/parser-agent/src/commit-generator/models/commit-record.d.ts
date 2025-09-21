@@ -1,0 +1,30 @@
+import { Model } from "sequelize-typescript";
+export declare class CommitRecordModel extends Model<CommitRecordModel> {
+    createdAt: Date;
+    updatedAt: Date;
+    commitHash: string;
+    branchName: string;
+    authorEmail: string;
+    authorName: string;
+    commitSummary: string;
+    commitType: string;
+    commitVersion: string;
+    commitWorkspaceName: string;
+    commitEntities: string;
+    commitAt: Date;
+    filesChanged: string;
+    codeLinesAdded: number;
+    codeLinesDeleted: number;
+    linkedDocsUrls: string;
+    linkedContext: string;
+    totalFiles: number;
+    includeAiCodeFiles: number;
+    aiCodeFiles: number;
+    fileAcceptanceRate: number;
+    totalCodeLines: number;
+    includeAiCodeLines: number;
+    aiCodeLines: number;
+    codeAcceptanceRate: number;
+    lastCommitHash: string;
+}
+export type ICommitRecordModel = typeof CommitRecordModel;

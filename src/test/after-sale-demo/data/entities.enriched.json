@@ -1,0 +1,403 @@
+[
+  {
+    "id": "Component:App",
+    "type": "component",
+    "file": "src/App.vue",
+    "loc": 7,
+    "rawName": "default",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [
+      "router-view"
+    ],
+    "summary": "Vue应用程序的入口组件，提供基础布局和样式，通过router-view渲染路由匹配的组件，实现页面导航和内容展示功能。",
+    "tags": [
+      "应用入口",
+      "路由容器",
+      "Vue组件",
+      "布局框架",
+      "页面导航"
+    ],
+    "ANNOTATION": "这是APP.vue文件是个入口\n这是APP.vue文件是个入口\n这是APP.vue文件是个入口"
+  },
+  {
+    "id": "FunctionDeclaration:setMockEnabled",
+    "type": "function",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 29,
+      "end": 31
+    },
+    "rawName": "setMockEnabled",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "控制售后服务API是否使用模拟数据的开关函数，通过设置布尔值参数来启用或禁用模拟数据返回功能，影响售后申请、统计和退款等API的数据来源。",
+    "tags": [
+      "售后服务",
+      "模拟数据",
+      "API控制",
+      "开发调试",
+      "数据模拟"
+    ],
+    "ANNOTATION": "开关mock功能的函数\n@param enabled 是否启用mock功能"
+  },
+  {
+    "id": "FunctionDeclaration:submitAfterSale",
+    "type": "function",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 34,
+      "end": 51
+    },
+    "rawName": "submitAfterSale",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "提交售后申请的函数，接收售后申请数据，支持模拟数据返回和真实API调用，返回包含成功状态、消息和订单数据的Promise对象",
+    "tags": [
+      "售后申请",
+      "电商API",
+      "模拟数据",
+      "异步请求",
+      "订单处理"
+    ],
+    "ANNOTATION": "售后申请接口"
+  },
+  {
+    "id": "FunctionDeclaration:getAfterSaleStats",
+    "type": "function",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 54,
+      "end": 70
+    },
+    "rawName": "getAfterSaleStats",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "获取指定订单的售后统计数据，支持真实API调用和模拟数据返回两种模式，返回售后数量和更新时间信息",
+    "tags": [
+      "售后统计",
+      "订单数据",
+      "API接口",
+      "模拟数据",
+      "电商售后"
+    ],
+    "ANNOTATION": "获取售后统计数据接口"
+  },
+  {
+    "id": "FunctionDeclaration:submitRefundRequest",
+    "type": "function",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 73,
+      "end": 95
+    },
+    "rawName": "submitRefundRequest",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "提交退款申请的API函数，接收退款金额、退款方式等参数，支持模拟数据返回和真实接口调用，返回包含退款ID和状态的处理结果",
+    "tags": [
+      "退款申请",
+      "售后服务",
+      "API接口",
+      "电商功能",
+      "异步请求"
+    ],
+    "ANNOTATION": "提交退款申请接口"
+  },
+  {
+    "id": "Component:AfterSaleForm",
+    "type": "component",
+    "file": "src/components/AfterSaleForm.vue",
+    "loc": 22,
+    "rawName": "setup",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [
+      "submit"
+    ],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "售后申请表单组件，包含订单号输入和申请原因选择，提交后触发submit事件并传递表单数据，用于客户发起售后服务申请",
+    "tags": [
+      "售后申请",
+      "表单组件",
+      "订单处理",
+      "客户服务",
+      "Vue组件"
+    ],
+    "ANNOTATION": "这是AfterSaleForm.vue文件是个售后申请表单"
+  },
+  {
+    "id": "Component:AfterSaleStatus",
+    "type": "component",
+    "file": "src/components/AfterSaleStatus.vue",
+    "loc": 12,
+    "rawName": "setup",
+    "isDDD": false,
+    "IMPORTS": [
+      "Component:ReturnPolicyModal"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [
+      "ReturnPolicyModal"
+    ],
+    "summary": "售后状态展示组件，根据不同售后状态（如提交中、处理中、已完成等）显示对应的消息和样式，处理中状态时可展示退货政策弹窗。",
+    "tags": [
+      "售后状态",
+      "状态展示",
+      "退货政策",
+      "状态样式",
+      "售后流程"
+    ],
+    "ANNOTATION": "售后状态展示组件\n根据不同状态显示对应的消息和样式\n在处理中状态时可展示退货政策弹窗"
+  },
+  {
+    "id": "Component:NotificationToast",
+    "type": "component",
+    "file": "src/components/NotificationToast.tsx",
+    "loc": 6,
+    "rawName": "default",
+    "isDDD": false,
+    "IMPORTS": [
+      "Component:ToastContent"
+    ],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "组件: default",
+    "tags": [
+      "component"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Component:RefundRequestForm",
+    "type": "component",
+    "file": "src/components/RefundRequestForm.vue",
+    "loc": 21,
+    "rawName": "setup",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [
+      "submit"
+    ],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "退款申请表单组件，允许用户输入退款金额和选择退款方式（原路返回或退到余额），提交后触发submit事件并传递表单数据。",
+    "tags": [
+      "退款申请",
+      "表单组件",
+      "金额输入",
+      "退款方式选择",
+      "电商售后"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Component:ReturnPolicyModal",
+    "type": "component",
+    "file": "src/components/ReturnPolicyModal.vue",
+    "loc": 14,
+    "rawName": "setup",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [
+      "close"
+    ],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "退货政策弹窗组件，展示7天内可退货和15天内可换货的政策信息，用户确认后可关闭弹窗，并触发close事件。",
+    "tags": [
+      "退货政策",
+      "弹窗",
+      "售后服务",
+      "用户确认",
+      "电商组件"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Component:ToastContent",
+    "type": "component",
+    "file": "src/components/ToastContent.vue",
+    "loc": 8,
+    "rawName": "setup",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "定义通知提示内容组件的属性，接收消息文本和类型（成功、错误、警告、信息）参数，用于在界面右上角显示不同样式的提示信息。",
+    "tags": [
+      "通知提示",
+      "消息提醒",
+      "UI组件",
+      "交互反馈",
+      "状态提示"
+    ],
+    "ANNOTATION": "定义 props"
+  },
+  {
+    "id": "FunctionDeclaration:useAfterSaleMetrics",
+    "type": "function",
+    "file": "src/hooks/useAfterSaleMetrics.ts",
+    "loc": {
+      "start": 6,
+      "end": 17
+    },
+    "rawName": "useAfterSaleMetrics",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "售后统计钩子，接收订单ID参数，获取并监听售后统计数据（包括售后数量和最后更新时间），提供刷新功能，在订单ID变化时自动更新数据。",
+    "tags": [
+      "售后统计",
+      "订单数据",
+      "Vue钩子",
+      "数据监听",
+      "售后服务"
+    ],
+    "ANNOTATION": "定义一个售后统计钩子，用于获取售后统计信息"
+  },
+  {
+    "id": "Component:AfterSaleDashboard",
+    "type": "component",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": 13,
+    "rawName": "setup",
+    "isDDD": false,
+    "IMPORTS": [
+      "Component:AfterSaleForm",
+      "Component:RefundRequestForm",
+      "Component:AfterSaleStatus",
+      "FunctionDeclaration:submitAfterSale",
+      "FunctionDeclaration:submitRefundRequest",
+      "Component:AftersaleDa",
+      "Component:AftersaleDax"
+    ],
+    "CALLS": [
+      "FunctionDeclaration:submitAfterSale",
+      "FunctionDeclaration:submitRefundRequest"
+    ],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [
+      "AfterSaleForm",
+      "RefundRequestForm",
+      "AfterSaleStatus"
+    ],
+    "summary": "售后中心页面的初始化逻辑，管理售后申请和退款申请流程，处理表单提交、状态更新和消息展示，与后端API交互完成售后服务流程。",
+    "tags": [
+      "售后管理",
+      "退款申请",
+      "状态跟踪",
+      "表单处理",
+      "用户反馈"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "FunctionDeclaration:formatDate",
+    "type": "function",
+    "file": "src/utils/dateFormatter.ts",
+    "loc": {
+      "start": 2,
+      "end": 4
+    },
+    "rawName": "formatDate",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "日期格式化函数，将Date对象转换为YYYY-MM-DD HH:MM:SS格式的字符串，通过替换ISO字符串中的T并移除毫秒部分实现",
+    "tags": [
+      "日期格式化",
+      "时间转换",
+      "字符串处理",
+      "工具函数",
+      "日期显示"
+    ],
+    "ANNOTATION": "定义一个日期格式化函数，用于将日期格式化为YYYY-MM-DD HH:MM:SS格式"
+  },
+  {
+    "id": "FunctionDeclaration:validateAfterSale",
+    "type": "function",
+    "file": "src/utils/validation.ts",
+    "loc": {
+      "start": 3,
+      "end": 7
+    },
+    "rawName": "validateAfterSale",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "验证售后申请数据的有效性，检查订单ID和申请原因是否存在，确保售后申请数据的完整性和有效性",
+    "tags": [
+      "售后验证",
+      "数据校验",
+      "订单处理",
+      "电商售后"
+    ],
+    "ANNOTATION": "apps/ecommerce-after-sale/src/utils/validation.ts\n定义一个验证函数，用于验证售后申请数据是否有效"
+  },
+  {
+    "id": "Component:AftersaleDax",
+    "type": "component",
+    "file": "src/components/AftersaleDax.tsx",
+    "loc": 18,
+    "rawName": "default",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "售后打款组件，接收优惠券信息列表作为参数，用于处理售后打款相关功能展示",
+    "tags": [
+      "售后",
+      "打款",
+      "优惠券",
+      "售后服务",
+      "金融"
+    ],
+    "ANNOTATION": ""
+  },
+  {
+    "id": "Component:AftersaleDa",
+    "type": "component",
+    "file": "src/components/AftersaleDa.tsx",
+    "loc": 12,
+    "rawName": "default",
+    "isDDD": false,
+    "IMPORTS": [],
+    "CALLS": [],
+    "EMITS": [],
+    "TEMPLATE_COMPONENTS": [],
+    "summary": "售后打款组件，接收优惠券信息列表作为参数，用于展示售后打款相关内容",
+    "tags": [
+      "售后打款",
+      "优惠券信息",
+      "React组件",
+      "售后服务"
+    ],
+    "ANNOTATION": ""
+  }
+]

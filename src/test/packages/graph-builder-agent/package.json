@@ -1,0 +1,31 @@
+{
+  "name": "@xhs/modular-project-graph-builder-agent",
+  "version": "1.0.3",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:update": "SKIP_CLEANUP=true vitest run",
+    "test:perf": "SKIP_CLEANUP=true vitest run --testNamePattern 'performance'",
+    "test:ingest": "SKIP_CLEANUP=true vitest run --testNamePattern 'Ingestion'",
+    "test:log-ingestion": "vitest run --testNamePattern 'Log Ingestion Test'"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "@xhs/nebula-client": "workspace:*",
+    "@xhs/shared-utils": "workspace:*",
+    "@xhs/aws-anthropic": "^0.2.0",
+    "ai": "^3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vitest": "^0.34.0",
+    "@types/node": "^18.0.0"
+  }
+}

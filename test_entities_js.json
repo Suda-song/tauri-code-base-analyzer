@@ -1,0 +1,650 @@
+[
+  {
+    "id": "Component:App",
+    "type": "component",
+    "file": "src/App.vue",
+    "loc": {
+      "start": 14,
+      "end": 24
+    },
+    "rawName": "App",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:setMockEnabled",
+    "type": "function",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 29,
+      "end": 39
+    },
+    "rawName": "setMockEnabled",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:submitAfterSale",
+    "type": "function",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 34,
+      "end": 44
+    },
+    "rawName": "submitAfterSale",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:getAfterSaleStats",
+    "type": "function",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 54,
+      "end": 64
+    },
+    "rawName": "getAfterSaleStats",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:submitRefundRequest",
+    "type": "function",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 73,
+      "end": 83
+    },
+    "rawName": "submitRefundRequest",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Interface:AfterSaleStats",
+    "type": "interface",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 5,
+      "end": 15
+    },
+    "rawName": "AfterSaleStats",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Interface:AfterSaleResponse",
+    "type": "interface",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 9,
+      "end": 19
+    },
+    "rawName": "AfterSaleResponse",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Interface:RefundRequest",
+    "type": "interface",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 15,
+      "end": 25
+    },
+    "rawName": "RefundRequest",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:useMock",
+    "type": "variable",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 23,
+      "end": 33
+    },
+    "rawName": "useMock",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:handle",
+    "type": "function",
+    "file": "src/components/AfterSaleForm.vue",
+    "loc": {
+      "start": 40,
+      "end": 50
+    },
+    "rawName": "handle",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:emit",
+    "type": "variable",
+    "file": "src/components/AfterSaleForm.vue",
+    "loc": {
+      "start": 32,
+      "end": 42
+    },
+    "rawName": "emit",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:formData",
+    "type": "variable",
+    "file": "src/components/AfterSaleForm.vue",
+    "loc": {
+      "start": 35,
+      "end": 45
+    },
+    "rawName": "formData",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Component:AfterSaleForm",
+    "type": "component",
+    "file": "src/components/AfterSaleForm.vue",
+    "loc": {
+      "start": 1,
+      "end": 10
+    },
+    "rawName": "AfterSaleForm",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:hidePolicy",
+    "type": "function",
+    "file": "src/components/AfterSaleStatus.vue",
+    "loc": {
+      "start": 23,
+      "end": 33
+    },
+    "rawName": "hidePolicy",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:showPolicy",
+    "type": "variable",
+    "file": "src/components/AfterSaleStatus.vue",
+    "loc": {
+      "start": 22,
+      "end": 32
+    },
+    "rawName": "showPolicy",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:props",
+    "type": "variable",
+    "file": "src/components/AfterSaleStatus.vue",
+    "loc": {
+      "start": 29,
+      "end": 39
+    },
+    "rawName": "props",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:statusMessage",
+    "type": "variable",
+    "file": "src/components/AfterSaleStatus.vue",
+    "loc": {
+      "start": 34,
+      "end": 44
+    },
+    "rawName": "statusMessage",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:statusClass",
+    "type": "variable",
+    "file": "src/components/AfterSaleStatus.vue",
+    "loc": {
+      "start": 56,
+      "end": 66
+    },
+    "rawName": "statusClass",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Component:AfterSaleStatus",
+    "type": "component",
+    "file": "src/components/AfterSaleStatus.vue",
+    "loc": {
+      "start": 1,
+      "end": 10
+    },
+    "rawName": "AfterSaleStatus",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Interface:IProps",
+    "type": "interface",
+    "file": "src/components/AftersaleDa.tsx",
+    "loc": {
+      "start": 2,
+      "end": 12
+    },
+    "rawName": "IProps",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Interface:IProps",
+    "type": "interface",
+    "file": "src/components/AftersaleDax.tsx",
+    "loc": {
+      "start": 2,
+      "end": 12
+    },
+    "rawName": "IProps",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:AftersaleDax",
+    "type": "variable",
+    "file": "src/components/AftersaleDax.tsx",
+    "loc": {
+      "start": 12,
+      "end": 19
+    },
+    "rawName": "AftersaleDax",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:handleRefund",
+    "type": "function",
+    "file": "src/components/RefundRequestForm.vue",
+    "loc": {
+      "start": 38,
+      "end": 48
+    },
+    "rawName": "handleRefund",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:emit",
+    "type": "variable",
+    "file": "src/components/RefundRequestForm.vue",
+    "loc": {
+      "start": 29,
+      "end": 39
+    },
+    "rawName": "emit",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:formData",
+    "type": "variable",
+    "file": "src/components/RefundRequestForm.vue",
+    "loc": {
+      "start": 33,
+      "end": 43
+    },
+    "rawName": "formData",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Component:RefundRequestForm",
+    "type": "component",
+    "file": "src/components/RefundRequestForm.vue",
+    "loc": {
+      "start": 1,
+      "end": 10
+    },
+    "rawName": "RefundRequestForm",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:closeModal",
+    "type": "function",
+    "file": "src/components/ReturnPolicyModal.vue",
+    "loc": {
+      "start": 22,
+      "end": 32
+    },
+    "rawName": "closeModal",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:emit",
+    "type": "variable",
+    "file": "src/components/ReturnPolicyModal.vue",
+    "loc": {
+      "start": 16,
+      "end": 26
+    },
+    "rawName": "emit",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:isVisible",
+    "type": "variable",
+    "file": "src/components/ReturnPolicyModal.vue",
+    "loc": {
+      "start": 20,
+      "end": 30
+    },
+    "rawName": "isVisible",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Component:ReturnPolicyModal",
+    "type": "component",
+    "file": "src/components/ReturnPolicyModal.vue",
+    "loc": {
+      "start": 1,
+      "end": 10
+    },
+    "rawName": "ReturnPolicyModal",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Component:ToastContent",
+    "type": "component",
+    "file": "src/components/ToastContent.vue",
+    "loc": {
+      "start": 1,
+      "end": 10
+    },
+    "rawName": "ToastContent",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:useAfterSaleMetrics",
+    "type": "function",
+    "file": "src/hooks/useAfterSaleMetrics.ts",
+    "loc": {
+      "start": 6,
+      "end": 16
+    },
+    "rawName": "useAfterSaleMetrics",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:fetch",
+    "type": "function",
+    "file": "src/hooks/useAfterSaleMetrics.ts",
+    "loc": {
+      "start": 8,
+      "end": 17
+    },
+    "rawName": "fetch",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:stats",
+    "type": "variable",
+    "file": "src/hooks/useAfterSaleMetrics.ts",
+    "loc": {
+      "start": 7,
+      "end": 17
+    },
+    "rawName": "stats",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:res",
+    "type": "variable",
+    "file": "src/hooks/useAfterSaleMetrics.ts",
+    "loc": {
+      "start": 9,
+      "end": 17
+    },
+    "rawName": "res",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:app",
+    "type": "variable",
+    "file": "src/main.ts",
+    "loc": {
+      "start": 8,
+      "end": 16
+    },
+    "rawName": "app",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:showMessage",
+    "type": "function",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": {
+      "start": 40,
+      "end": 50
+    },
+    "rawName": "showMessage",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:onSubmit",
+    "type": "function",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": {
+      "start": 51,
+      "end": 61
+    },
+    "rawName": "onSubmit",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:onRefundSubmit",
+    "type": "function",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": {
+      "start": 74,
+      "end": 84
+    },
+    "rawName": "onRefundSubmit",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:status",
+    "type": "variable",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": {
+      "start": 32,
+      "end": 42
+    },
+    "rawName": "status",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:showRefund",
+    "type": "variable",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": {
+      "start": 34,
+      "end": 44
+    },
+    "rawName": "showRefund",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:responseMessage",
+    "type": "variable",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": {
+      "start": 35,
+      "end": 45
+    },
+    "rawName": "responseMessage",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:hasError",
+    "type": "variable",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": {
+      "start": 36,
+      "end": 46
+    },
+    "rawName": "hasError",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:currentOrderId",
+    "type": "variable",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": {
+      "start": 37,
+      "end": 47
+    },
+    "rawName": "currentOrderId",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:response",
+    "type": "variable",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": {
+      "start": 54,
+      "end": 64
+    },
+    "rawName": "response",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:request",
+    "type": "variable",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": {
+      "start": 79,
+      "end": 89
+    },
+    "rawName": "request",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:response",
+    "type": "variable",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": {
+      "start": 83,
+      "end": 93
+    },
+    "rawName": "response",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Component:AfterSaleDashboard",
+    "type": "component",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": {
+      "start": 1,
+      "end": 10
+    },
+    "rawName": "AfterSaleDashboard",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:routes",
+    "type": "variable",
+    "file": "src/router/index.ts",
+    "loc": {
+      "start": 4,
+      "end": 13
+    },
+    "rawName": "routes",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:router",
+    "type": "variable",
+    "file": "src/router/index.ts",
+    "loc": {
+      "start": 8,
+      "end": 13
+    },
+    "rawName": "router",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:component",
+    "type": "variable",
+    "file": "src/shims-vue.d.ts",
+    "loc": {
+      "start": 4,
+      "end": 6
+    },
+    "rawName": "component",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:useAfterSaleStore",
+    "type": "variable",
+    "file": "src/stores/afterSale.ts",
+    "loc": {
+      "start": 6,
+      "end": 16
+    },
+    "rawName": "useAfterSaleStore",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:formatDate",
+    "type": "function",
+    "file": "src/utils/dateFormatter.ts",
+    "loc": {
+      "start": 2,
+      "end": 5
+    },
+    "rawName": "formatDate",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:validateAfterSale",
+    "type": "function",
+    "file": "src/utils/validation.ts",
+    "loc": {
+      "start": 3,
+      "end": 8
+    },
+    "rawName": "validateAfterSale",
+    "isWorkspace": true,
+    "isDDD": false
+  }
+]

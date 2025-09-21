@@ -1,0 +1,63 @@
+{
+  "name": "@xhs/modular-code-analysis-agent",
+  "version": "1.0.25",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "parser-agent": "dist/cli.js",
+    "enrichment-agent": "dist/enrichment/cli.js",
+    "rag-agent": "dist/rag-cli.js",
+    "patch-parse": "dist/patch-parse/cli.js",
+    "ai-commit": "dist/commit-generator/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "extract": "ts-node src/index.ts",
+    "enrich": "ts-node src/enrichment/cli.ts",
+    "rag:search": "ts-node src/rag-cli.ts search",
+    "rag:related": "ts-node src/rag-cli.ts related",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.25.2",
+    "@vue/compiler-sfc": "^3.2.0",
+    "@xhs/aws-anthropic": "^0.2.0",
+    "@xhs/modular-project-graph-builder-agent": "workspace:*",
+    "@xhs/shared-utils": "workspace:*",
+    "ai": "4.0.16",
+    "chalk": "^4.1.2",
+    "clipboardy": "^2.3.0",
+    "commander": "^9.0.0",
+    "dotenv": "^16.3.1",
+    "glob": "^8.0.3",
+    "inquirer": "^8.2.6",
+    "jsonrepair": "^3.12.0",
+    "mysql2": "^3.9.3",
+    "ora": "^5.4.1",
+    "p-limit": "^3.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sequelize": "^5.21.4",
+    "sequelize-typescript": "^1.1.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.6",
+    "ts-morph": "^17.0.0",
+    "typescript": "^5.0.0",
+    "underscore": "^1.13.7",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/inquirer": "^9.0.8",
+    "@types/node": "^18.0.0",
+    "@types/sequelize": "^4.28.20",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.0.0",
+    "vitest": "^0.34.0"
+  }
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "Component:App",
+    "type": "component",
+    "file": "src/App.vue",
+    "loc": 7,
+    "rawName": "default"
+  },
+  {
+    "id": "FunctionDeclaration:setMockEnabled",
+    "type": "function",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 29,
+      "end": 31
+    },
+    "rawName": "setMockEnabled"
+  },
+  {
+    "id": "FunctionDeclaration:submitAfterSale",
+    "type": "function",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 34,
+      "end": 51
+    },
+    "rawName": "submitAfterSale"
+  },
+  {
+    "id": "FunctionDeclaration:getAfterSaleStats",
+    "type": "function",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 54,
+      "end": 70
+    },
+    "rawName": "getAfterSaleStats"
+  },
+  {
+    "id": "FunctionDeclaration:submitRefundRequest",
+    "type": "function",
+    "file": "src/api/afterSale.ts",
+    "loc": {
+      "start": 73,
+      "end": 95
+    },
+    "rawName": "submitRefundRequest"
+  },
+  {
+    "id": "Component:AfterSaleForm",
+    "type": "component",
+    "file": "src/components/AfterSaleForm.vue",
+    "loc": 22,
+    "rawName": "setup"
+  },
+  {
+    "id": "Component:AfterSaleStatus",
+    "type": "component",
+    "file": "src/components/AfterSaleStatus.vue",
+    "loc": 12,
+    "rawName": "setup"
+  },
+  {
+    "id": "Component:NotificationToast",
+    "type": "component",
+    "file": "src/components/NotificationToast.tsx",
+    "loc": 6,
+    "rawName": "default"
+  },
+  {
+    "id": "Component:RefundRequestForm",
+    "type": "component",
+    "file": "src/components/RefundRequestForm.vue",
+    "loc": 21,
+    "rawName": "setup"
+  },
+  {
+    "id": "Component:ReturnPolicyModal",
+    "type": "component",
+    "file": "src/components/ReturnPolicyModal.vue",
+    "loc": 14,
+    "rawName": "setup"
+  },
+  {
+    "id": "Component:ToastContent",
+    "type": "component",
+    "file": "src/components/ToastContent.vue",
+    "loc": 8,
+    "rawName": "setup"
+  },
+  {
+    "id": "FunctionDeclaration:useAfterSaleMetrics",
+    "type": "function",
+    "file": "src/hooks/useAfterSaleMetrics.ts",
+    "loc": {
+      "start": 6,
+      "end": 17
+    },
+    "rawName": "useAfterSaleMetrics"
+  },
+  {
+    "id": "Component:AfterSaleDashboard",
+    "type": "component",
+    "file": "src/pages/AfterSaleDashboard.vue",
+    "loc": 13,
+    "rawName": "setup"
+  },
+  {
+    "id": "FunctionDeclaration:formatDate",
+    "type": "function",
+    "file": "src/utils/dateFormatter.ts",
+    "loc": {
+      "start": 2,
+      "end": 4
+    },
+    "rawName": "formatDate"
+  },
+  {
+    "id": "FunctionDeclaration:validateAfterSale",
+    "type": "function",
+    "file": "src/utils/validation.ts",
+    "loc": {
+      "start": 3,
+      "end": 7
+    },
+    "rawName": "validateAfterSale"
+  },
+  {
+    "id": "Component:AftersaleDax",
+    "type": "component",
+    "file": "src/components/AftersaleDax.tsx",
+    "loc": 18,
+    "rawName": "default"
+  },
+  {
+    "id": "Component:AftersaleDa",
+    "type": "component",
+    "file": "src/components/AftersaleDa.tsx",
+    "loc": 12,
+    "rawName": "default"
+  }
+]

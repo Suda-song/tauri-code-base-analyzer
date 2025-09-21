@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create tauri-app@latest -- --beta)",
+      "Bash(cargo install create-tauri-app --locked)",
+      "Bash(npm --version)",
+      "Bash(npm install)",
+      "Bash(cargo test test_analyze_after_sale_demo --)",
+      "Bash(node test_entity_analyzer.js)",
+      "Bash(npm run dev)",
+      "Bash(npm run tauri:dev)",
+      "Bash(cargo search tauri --limit 1)",
+      "Bash(npm view @tauri-apps/api versions --json)",
+      "Bash(cargo search tauri-build --limit 1)",
+      "Bash(cargo search tauri-plugin-fs --limit 1)",
+      "Bash(cargo search tauri-plugin-dialog --limit 1)",
+      "Bash(cargo search tauri)",
+      "Bash(cargo info tauri-build)",
+      "Bash(cargo clean)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

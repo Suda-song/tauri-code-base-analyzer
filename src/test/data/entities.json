@@ -1,0 +1,699 @@
+[
+  {
+    "id": "Function:run",
+    "type": "function",
+    "file": "packages/cursor-mcp-plugin/src/index.ts",
+    "loc": {
+      "start": 293,
+      "end": 301
+    },
+    "rawName": "run",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:escapeString",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 24,
+      "end": 37
+    },
+    "rawName": "escapeString",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:logQuery",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 39,
+      "end": 41
+    },
+    "rawName": "logQuery",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:executeNgqlWithRetry",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 50,
+      "end": 105
+    },
+    "rawName": "executeNgqlWithRetry",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:buildGraph",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 114,
+      "end": 173
+    },
+    "rawName": "buildGraph",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:addOrUpdateFile",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 180,
+      "end": 199
+    },
+    "rawName": "addOrUpdateFile",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:addOrUpdateEntity",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 206,
+      "end": 256
+    },
+    "rawName": "addOrUpdateEntity",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:addOrUpdateFlow",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 263,
+      "end": 288
+    },
+    "rawName": "addOrUpdateFlow",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:createRelationships",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 298,
+      "end": 377
+    },
+    "rawName": "createRelationships",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:clearNodeExistenceCache",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 652,
+      "end": 655
+    },
+    "rawName": "clearNodeExistenceCache",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:prepareDataFromFile",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/builder.ts",
+    "loc": {
+      "start": 704,
+      "end": 771
+    },
+    "rawName": "prepareDataFromFile",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  ，
+  {
+    "id": "Function:initializeGlobalClient",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 494,
+      "end": 498
+    },
+    "rawName": "initializeGlobalClient",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:getGlobalClient",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 503,
+      "end": 505
+    },
+    "rawName": "getGlobalClient",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:useSpace",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 510,
+      "end": 512
+    },
+    "rawName": "useSpace",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:executeQuery",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 517,
+      "end": 519
+    },
+    "rawName": "executeQuery",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:getClientStatus",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 524,
+      "end": 526
+    },
+    "rawName": "getClientStatus",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:reconnectClient",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 531,
+      "end": 533
+    },
+    "rawName": "reconnectClient",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:destroyGlobalClient",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 538,
+      "end": 540
+    },
+    "rawName": "destroyGlobalClient",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Class:GlobalClientManager",
+    "type": "class",
+    "file": "packages/graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 38,
+      "end": 486
+    },
+    "rawName": "GlobalClientManager",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:clientManager",
+    "type": "variable",
+    "file": "packages/graph-builder-agent/src/client-manager.ts",
+    "loc": {
+      "start": 489,
+      "end": 489
+    },
+    "rawName": "clientManager",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:create",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "create",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:update",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "update",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:read",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "read",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:remove",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "remove",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:batchCreate",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "batchCreate",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:batchUpdate",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "batchUpdate",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:batchRemove",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "batchRemove",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:getEntitiesInFile",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "getEntitiesInFile",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:queryEntities",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "queryEntities",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:getRelatedEntities",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "getRelatedEntities",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:getEntityDependencyChain",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "getEntityDependencyChain",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:findRelationshipPath",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "findRelationshipPath",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:getEntityImports",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "getEntityImports",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:getEntityCalls",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/crud.ts",
+    "loc": {
+      "start": 1025,
+      "end": 1054
+    },
+    "rawName": "getEntityCalls",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:getCurrentSpace",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 32,
+      "end": 41
+    },
+    "rawName": "getCurrentSpace",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:createSchemaStatements",
+    "type": "function",
+    "file": "packages/graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 47,
+      "end": 69
+    },
+    "rawName": "createSchemaStatements",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:DEFAULT_SPACE",
+    "type": "variable",
+    "file": "packages/graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 6,
+      "end": 6
+    },
+    "rawName": "DEFAULT_SPACE",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:FILE_TAG",
+    "type": "variable",
+    "file": "packages/graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 9,
+      "end": 9
+    },
+    "rawName": "FILE_TAG",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:ENTITY_TAG",
+    "type": "variable",
+    "file": "packages/graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 12,
+      "end": 12
+    },
+    "rawName": "ENTITY_TAG",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:FLOW_TAG",
+    "type": "variable",
+    "file": "packages/graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 15,
+      "end": 15
+    },
+    "rawName": "FLOW_TAG",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:REL_CONTAINS",
+    "type": "variable",
+    "file": "packages/graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 18,
+      "end": 18
+    },
+    "rawName": "REL_CONTAINS",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:REL_IMPORTS",
+    "type": "variable",
+    "file": "packages/graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 21,
+      "end": 21
+    },
+    "rawName": "REL_IMPORTS",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:REL_CALLS",
+    "type": "variable",
+    "file": "packages/graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 24,
+      "end": 24
+    },
+    "rawName": "REL_CALLS",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:REL_EMITS",
+    "type": "variable",
+    "file": "packages/graph-builder-agent/src/schema.ts",
+    "loc": {
+      "start": 27,
+      "end": 27
+    },
+    "rawName": "REL_EMITS",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:searchCodeEntities",
+    "type": "function",
+    "file": "packages/parser-agent/src/rag-inline-tool.ts",
+    "loc": {
+      "start": 1758,
+      "end": 1766
+    },
+    "rawName": "searchCodeEntities",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:getRelatedCodeEntities",
+    "type": "function",
+    "file": "packages/parser-agent/src/rag-inline-tool.ts",
+    "loc": {
+      "start": 1769,
+      "end": 1777
+    },
+    "rawName": "getRelatedCodeEntities",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Class:RagInlineTool",
+    "type": "class",
+    "file": "packages/parser-agent/src/rag-inline-tool.ts",
+    "loc": {
+      "start": 76,
+      "end": 1755
+    },
+    "rawName": "RagInlineTool",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Class:DB",
+    "type": "class",
+    "file": "packages/parser-agent/src/db/index.ts",
+    "loc": {
+      "start": 17,
+      "end": 129
+    },
+    "rawName": "DB",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:run",
+    "type": "function",
+    "file": "backup/index.ts",
+    "loc": {
+      "start": 1241,
+      "end": 1259
+    },
+    "rawName": "run",
+    "isWorkspace": false,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:server",
+    "type": "variable",
+    "file": "backup/index.ts",
+    "loc": {
+      "start": 43,
+      "end": 64
+    },
+    "rawName": "server",
+    "isWorkspace": false,
+    "isDDD": false
+  },
+  {
+    "id": "Class:MultiWorkspaceManager",
+    "type": "class",
+    "file": "packages/cursor-mcp-plugin/src/utils/multi-workspace-utils.ts",
+    "loc": {
+      "start": 12,
+      "end": 273
+    },
+    "rawName": "MultiWorkspaceManager",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:multiWorkspaceManager",
+    "type": "variable",
+    "file": "packages/cursor-mcp-plugin/src/utils/multi-workspace-utils.ts",
+    "loc": {
+      "start": 276,
+      "end": 276
+    },
+    "rawName": "multiWorkspaceManager",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Class:CodeRAG",
+    "type": "class",
+    "file": "packages/graph-builder-agent/src/rag.ts",
+    "loc": {
+      "start": 12,
+      "end": 298
+    },
+    "rawName": "CodeRAG",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:TOOL_PARAMS",
+    "type": "variable",
+    "file": "packages/cursor-mcp-plugin/src/tools/params.ts",
+    "loc": {
+      "start": 3,
+      "end": 76
+    },
+    "rawName": "TOOL_PARAMS",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:TOOL_NAMES",
+    "type": "variable",
+    "file": "packages/cursor-mcp-plugin/src/tools/params.ts",
+    "loc": {
+      "start": 78,
+      "end": 85
+    },
+    "rawName": "TOOL_NAMES",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:TOOL_DESCRIPTIONS",
+    "type": "variable",
+    "file": "packages/cursor-mcp-plugin/src/tools/params.ts",
+    "loc": {
+      "start": 87,
+      "end": 100
+    },
+    "rawName": "TOOL_DESCRIPTIONS",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Variable:TOOL_USAGE_HINTS",
+    "type": "variable",
+    "file": "packages/cursor-mcp-plugin/src/tools/params.ts",
+    "loc": {
+      "start": 103,
+      "end": 116
+    },
+    "rawName": "TOOL_USAGE_HINTS",
+    "isWorkspace": true,
+    "isDDD": false
+  },
+  {
+    "id": "Function:getFullToolDescription",
+    "type": "function",
+    "file": "packages/cursor-mcp-plugin/src/tools/params.ts",
+    "loc": {
+      "start": 119,
+      "end": 123
+    },
+    "rawName": "getFullToolDescription",
+    "isWorkspace": true,
+    "isDDD": false
+  }
+]
