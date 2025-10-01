@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "project_path": "/Users/songdingan/dev/tauri-code-base-analyzer/src/test/after-sale-demo",
+    "scan_time": "2025-10-01T13:01:53.148422+00:00",
+    "version": "0.1.0",
+    "tool": "tauri-code-base-analyzer"
+  },
+  "entities": [
+    {
+      "id": "Component:App",
+      "entity_type": "component",
+      "file": "src/App.vue",
+      "loc": {
+        "start_line": 7,
+        "end_line": 7
+      },
+      "raw_name": "default"
+    },
+    {
+      "id": "Function:useAfterSaleStore",
+      "entity_type": "function",
+      "file": "src/stores/afterSale.ts",
+      "loc": {
+        "start_line": 6,
+        "end_line": 19
+      },
+      "raw_name": "useAfterSaleStore"
+    },
+    {
+      "id": "Function:validateAfterSale",
+      "entity_type": "function",
+      "file": "src/utils/validation.ts",
+      "loc": {
+        "start_line": 3,
+        "end_line": 7
+      },
+      "raw_name": "validateAfterSale"
+    },
+    {
+      "id": "Function:formatDate",
+      "entity_type": "function",
+      "file": "src/utils/dateFormatter.ts",
+      "loc": {
+        "start_line": 2,
+        "end_line": 4
+      },
+      "raw_name": "formatDate"
+    },
+    {
+      "id": "Component:RefundRequestForm",
+      "entity_type": "component",
+      "file": "src/components/RefundRequestForm.vue",
+      "loc": {
+        "start_line": 20,
+        "end_line": 20
+      },
+      "raw_name": "setup"
+    },
+    {
+      "id": "Function:useAfterSaleMetrics",
+      "entity_type": "function",
+      "file": "src/hooks/useAfterSaleMetrics.ts",
+      "loc": {
+        "start_line": 6,
+        "end_line": 17
+      },
+      "raw_name": "useAfterSaleMetrics"
+    },
+    {
+      "id": "Function:setMockEnabled",
+      "entity_type": "function",
+      "file": "src/api/afterSale.ts",
+      "loc": {
+        "start_line": 29,
+        "end_line": 31
+      },
+      "raw_name": "setMockEnabled"
+    },
+    {
+      "id": "Function:submitAfterSale",
+      "entity_type": "function",
+      "file": "src/api/afterSale.ts",
+      "loc": {
+        "start_line": 34,
+        "end_line": 51
+      },
+      "raw_name": "submitAfterSale"
+    },
+    {
+      "id": "Function:getAfterSaleStats",
+      "entity_type": "function",
+      "file": "src/api/afterSale.ts",
+      "loc": {
+        "start_line": 54,
+        "end_line": 70
+      },
+      "raw_name": "getAfterSaleStats"
+    },
+    {
+      "id": "Function:submitRefundRequest",
+      "entity_type": "function",
+      "file": "src/api/afterSale.ts",
+      "loc": {
+        "start_line": 73,
+        "end_line": 95
+      },
+      "raw_name": "submitRefundRequest"
+    },
+    {
+      "id": "Component:AfterSaleDashboard",
+      "entity_type": "component",
+      "file": "src/pages/AfterSaleDashboard.vue",
+      "loc": {
+        "start_line": 13,
+        "end_line": 13
+      },
+      "raw_name": "setup"
+    },
+    {
+      "id": "Variable:router",
+      "entity_type": "variable",
+      "file": "src/router/index.ts",
+      "loc": {
+        "start_line": 9,
+        "end_line": 12
+      },
+      "raw_name": "router"
+    }
+  ],
+  "stats": {
+    "total_files": 18,
+    "success_files": 18,
+    "failed_files": 0,
+    "total_entities": 12,
+    "by_extension": {
+      ".vue": 7,
+      ".ts": 8,
+      ".tsx": 3
+    },
+    "by_entity_type": {
+      "component": 3,
+      "variable": 1,
+      "function": 8
+    },
+    "duration_ms": 143
+  }
+}
