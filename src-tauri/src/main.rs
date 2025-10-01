@@ -6,6 +6,12 @@ mod entity_analyzer;
 mod precise_analyzer;
 mod test;
 
+// 新的三层架构模块
+mod claude_client;      // 第 1 层：基础设施
+mod tool_execution;     // 第 2 层：工具
+mod agent_core;         // 第 3 层：应用
+mod ts_sdk_wrapper;     // TypeScript SDK 桥接器
+
 use analyzer::{CodeAnalyzer, AnalysisResult};
 use entity_analyzer::{EntityAnalyzer, CodeEntity};
 use precise_analyzer::{PreciseAnalyzer, PreciseAnalysisResult};
