@@ -9,6 +9,7 @@ edition = "2021"
 
 [build-dependencies]
 tauri-build = { version = "2.4.1", features = [] }
+cc = "1.0"
 
 [dependencies]
 tauri = { version = "2.4.1", features = [] }
@@ -20,6 +21,14 @@ walkdir = "2.3"
 regex = "1.5"
 tokio = { version = "1.0.0", features = ["full"] }
 chrono = { version = "0.4.0", features = ["serde"] }
+reqwest = { version = "0.11", features = ["json"] }
+async-trait = "0.1"
+glob = "0.3"
+anyhow = "1.0"
+tree-sitter = "0.22"
+tree-sitter-typescript = "0.21"
+tree-sitter-rust = "0.21"
+lazy_static = "1.4"
 
 [features]
 custom-protocol = ["tauri/custom-protocol"]
