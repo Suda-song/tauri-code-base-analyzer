@@ -154,11 +154,11 @@ impl FileWalker {
     ) -> Result<PathBuf> {
         // 1. 确定输出目录
         let output_dir = output_dir.unwrap_or("src/data");
-        let output_path = Path::new(output_dir);
+        let output_path = Path::new(project_path).join(output_dir);
 
         // 2. 创建目录（如果不存在）
         if !output_path.exists() {
-            fs::create_dir_all(output_path).context(format!("无法创建目录: {}", output_dir))?;
+            fs::create_dir_all(&output_path).context(format!("无法创建目录: {}", output_dir))?;
             println!("📁 创建输出目录: {}", output_dir);
         }
 

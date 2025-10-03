@@ -88,6 +88,28 @@ pub struct ClaudeRequest {
     pub stream: Option<bool>,
 }
 
+/// DeerAPI 思考配置
+#[derive(Debug, Serialize)]
+pub struct ThinkingConfig {
+    #[serde(rename = "type")]
+    pub thinking_type: String,
+    pub budget_tokens: u32,
+}
+
+/// DeerAPI 请求体格式（与标准 Claude API 类似）
+#[derive(Debug, Serialize)]
+pub struct DeerApiRequest {
+    pub model: String,
+    pub messages: Vec<Message>,
+    pub max_tokens: u32,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub thinking: Option<ThinkingConfig>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub temperature: Option<f32>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub stream: Option<bool>,
+}
+
 /// Claude API 响应体
 #[derive(Debug, Deserialize)]
 pub struct ClaudeResponse {
@@ -96,6 +118,27 @@ pub struct ClaudeResponse {
     pub content: Vec<ContentBlock>,
     pub stop_reason: Option<String>,
     pub usage: Usage,
+}
+
+/// DeerAPI 响应体格式
+#[derive(Debug, Deserialize)]
+pub struct DeerApiResponse {
+    pub id: Option<String>,
+    pub model: Option<String>,
+    pub choices: Option<Vec<Choice>>,
+    pub usage: Option<Usage>,
+    // 兼容性字段
+    pub content: Option<Vec<ContentBlock>>,
+    pub stop_reason: Option<String>,
+}
+
+/// 选择项
+#[derive(Debug, Deserialize)]
+pub struct Choice {
+    pub index: u32,
+    pub message: Option<Message>,
+    pub text: Option<String>,
+    pub finish_reason: Option<String>,
 }
 
 impl ClaudeResponse {
@@ -133,6 +176,64 @@ impl ClaudeResponse {
     }
 }
 
+impl DeerApiResponse {
+    /// 提取所有文本内容
+    pub fn get_text(&self) -> String {
+        // 优先使用 choices 格式
+        if let Some(choices) = &self.choices {
+            for choice in choices {
+                if let Some(message) = &choice.message {
+                    if let Some(MessageContent::Text(text)) = &message.content {
+                        return text.clone();
+                    }
+                }
+                if let Some(text) = &choice.text {
+                    return text.clone();
+                }
+            }
+        }
+
+        // 回退到 content 格式
+        if let Some(content) = &self.content {
+            content
+                .iter()
+                .filter_map(|block| {
+                    if let ContentBlock::Text { text } = block {
+                        Some(text.as_str())
+                    } else {
+                        None
+                    }
+                })
+                .collect::<Vec<_>>()
+                .join("\n")
+        } else {
+            String::new()
+        }
+    }
+
+    /// 提取所有工具调用
+    pub fn get_tool_uses(&self) -> Vec<ToolUseBlock> {
+        if let Some(content) = &self.content {
+            content
+                .iter()
+                .filter_map(|block| {
+                    if let ContentBlock::ToolUse { id, name, input } = block {
+                        Some(ToolUseBlock {
+                            id: id.clone(),
+                            name: name.clone(),
+                            input: input.clone(),
+                        })
+                    } else {
+                        None
+                    }
+                })
+                .collect()
+        } else {
+            vec![]
+        }
+    }
+}
+
 /// 工具使用块（方便提取）
 #[derive(Debug, Clone)]
 pub struct ToolUseBlock {
@@ -144,8 +245,11 @@ pub struct ToolUseBlock {
 /// API 使用统计
 #[derive(Debug, Deserialize)]
 pub struct Usage {
-    pub input_tokens: u32,
-    pub output_tokens: u32,
+    pub input_tokens: Option<u32>,
+    pub output_tokens: Option<u32>,
+    pub prompt_tokens: Option<u32>,
+    pub completion_tokens: Option<u32>,
+    pub total_tokens: Option<u32>,
 }
 
 /// 流式响应事件
@@ -155,13 +259,19 @@ pub enum StreamEvent {
     #[serde(rename = "message_start")]
     MessageStart { message: PartialMessage },
     #[serde(rename = "content_block_start")]
-    ContentBlockStart { index: u32, content_block: ContentBlock },
+    ContentBlockStart {
+        index: u32,
+        content_block: ContentBlock,
+    },
     #[serde(rename = "content_block_delta")]
     ContentBlockDelta { index: u32, delta: Delta },
     #[serde(rename = "content_block_stop")]
     ContentBlockStop { index: u32 },
     #[serde(rename = "message_delta")]
-    MessageDelta { delta: MessageDeltaInfo, usage: Usage },
+    MessageDelta {
+        delta: MessageDeltaInfo,
+        usage: Usage,
+    },
     #[serde(rename = "message_stop")]
     MessageStop,
     #[serde(rename = "ping")]

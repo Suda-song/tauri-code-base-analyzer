@@ -7,15 +7,15 @@ mod precise_analyzer;
 mod test;
 
 // 新的三层架构模块
-mod claude_client;      // 第 1 层：基础设施
-mod tool_execution;     // 第 2 层：工具
-mod agent_core;         // 第 3 层：应用
-mod ts_sdk_wrapper;     // TypeScript SDK 桥接器
+mod agent_core; // 第 3 层：应用
+mod claude_client; // 第 1 层：基础设施
+mod tool_execution; // 第 2 层：工具
+mod ts_sdk_wrapper; // TypeScript SDK 桥接器
 
-use analyzer::{CodeAnalyzer, AnalysisResult};
-use entity_analyzer::{EntityAnalyzer, CodeEntity};
-use precise_analyzer::{PreciseAnalyzer, PreciseAnalysisResult};
+use analyzer::{AnalysisResult, CodeAnalyzer};
 use chrono::Utc;
+use entity_analyzer::{CodeEntity, EntityAnalyzer};
+use precise_analyzer::{PreciseAnalysisResult, PreciseAnalyzer};
 use std::fs;
 use std::path::{Path, PathBuf};
 use tauri::Manager;
@@ -68,7 +68,10 @@ fn create_smart_output_path(input_path: &str) -> Result<PathBuf, String> {
         let fallback_dir = start_path.join("codebase");
 
         if let Err(e) = ensure_directory_exists(&fallback_dir) {
-            return Err(format!("Failed to create fallback codebase directory: {}", e));
+            return Err(format!(
+                "Failed to create fallback codebase directory: {}",
+                e
+            ));
         }
 
         Ok(fallback_dir)
@@ -106,7 +109,10 @@ async fn analyze_entities(repo_path: String) -> Result<Vec<CodeEntity>, String> 
 }
 
 #[tauri::command]
-async fn save_entities_json(entities: Vec<CodeEntity>, output_path: String) -> Result<String, String> {
+async fn save_entities_json(
+    entities: Vec<CodeEntity>,
+    output_path: String,
+) -> Result<String, String> {
     let json_content = match serde_json::to_string_pretty(&entities) {
         Ok(content) => content,
         Err(e) => return Err(format!("Failed to serialize entities: {}", e)),
@@ -122,7 +128,8 @@ async fn save_entities_json(entities: Vec<CodeEntity>, output_path: String) -> R
 
 #[tauri::command]
 async fn test_analyze_after_sale_demo() -> Result<String, String> {
-    let demo_path = "/Users/billion_bian/codebase/tauri-code-base-analyzer/src/test/after-sale-demo";
+    let demo_path =
+        "/Users/billion_bian/codebase/tauri-code-base-analyzer/src/test/after-sale-demo";
     let output_path = "/Users/billion_bian/codebase/tauri-code-base-analyzer";
 
     let analyzer = EntityAnalyzer::new();
@@ -137,7 +144,11 @@ async fn test_analyze_after_sale_demo() -> Result<String, String> {
             let output_file_path = Path::new(output_path).join("test_entities.json");
 
             match fs::write(&output_file_path, json_content) {
-                Ok(_) => Ok(format!("Generated {} entities to: {}", entities.len(), output_file_path.to_string_lossy())),
+                Ok(_) => Ok(format!(
+                    "Generated {} entities to: {}",
+                    entities.len(),
+                    output_file_path.to_string_lossy()
+                )),
                 Err(e) => Err(format!("Failed to write file: {}", e)),
             }
         }
@@ -146,7 +157,10 @@ async fn test_analyze_after_sale_demo() -> Result<String, String> {
 }
 
 #[tauri::command]
-async fn save_analysis_result(analysis: PreciseAnalysisResult, input_path: String) -> Result<String, String> {
+async fn save_analysis_result(
+    analysis: PreciseAnalysisResult,
+    input_path: String,
+) -> Result<String, String> {
     let json_content = match serde_json::to_string_pretty(&analysis) {
         Ok(content) => content,
         Err(e) => return Err(format!("Failed to serialize analysis: {}", e)),
@@ -175,7 +189,7 @@ async fn save_analysis_result(analysis: PreciseAnalysisResult, input_path: Strin
                 package_json_dir,
                 filename
             ))
-        },
+        }
         Err(e) => Err(format!("Failed to write file: {}", e)),
     }
 }
@@ -244,5 +258,9 @@ pub fn run() {
 }
 
 fn main() {
+    dotenv::dotenv().ok();
+    #[cfg(debug_assertions)]
+    println!("🔧 环境变量已加载");
+
     run();
 }
