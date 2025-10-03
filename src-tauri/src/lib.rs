@@ -1,17 +1,10 @@
 // Library exports for examples and tests
 
-// Core modules
-pub mod agent_core;
-pub mod claude_client;
-pub mod tool_execution;
-
-// Wrappers
-pub mod agent_sdk_wrapper;
-pub mod enhanced_claude_wrapper;
-pub mod real_agent_sdk_wrapper;
-pub mod ts_sdk_wrapper;
+// 核心模块
+pub mod claude_client; // Claude API 客户端
+pub mod tool_execution; // 代码分析工具
 
 // Re-export commonly used types
-pub use agent_core::{
-    RealAgentSdkCodingAgent, RealAgentSdkConfig, RealAgentSdkMode, RealAgentSdkTask,
+pub use tool_execution::codebase::{
+    CodeEntity, EnrichmentConfig, EnrichmentOrchestrator, FileWalker, ScanConfig,
 };
