@@ -1,0 +1,22 @@
+{
+  "name": "claude-sdk-bridge",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/claude-bridge.js",
+  "scripts": {
+    "build": "tsc",
+    "build:enhanced": "tsc enhanced-claude-bridge.ts --outDir dist --module commonjs --target es2020 --esModuleInterop --resolveJsonModule",
+    "build:agent": "tsc agent-sdk-bridge.ts --outDir dist --module commonjs --target es2020 --esModuleInterop --resolveJsonModule",
+    "build:real-agent": "tsc real-agent-sdk-bridge.ts --outDir dist --module esnext --target es2020 --esModuleInterop --resolveJsonModule --moduleResolution node",
+    "build:all": "npm run build && npm run build:enhanced && npm run build:agent && npm run build:real-agent",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.1.5",
+    "@anthropic-ai/sdk": "^0.30.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
