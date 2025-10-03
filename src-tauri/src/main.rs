@@ -8,9 +8,12 @@ mod test;
 
 // 新的三层架构模块
 mod agent_core; // 第 3 层：应用
-mod claude_client; // 第 1 层：基础设施
+mod agent_sdk_wrapper; // Claude Agent SDK 包装器（基于理念，旧版）
+mod claude_client; // 第 1 层：基础设施（保留，用于 enrichment）
+mod enhanced_claude_wrapper; // 增强型 Claude 包装器（旧版）
+mod real_agent_sdk_wrapper;
 mod tool_execution; // 第 2 层：工具
-mod ts_sdk_wrapper; // TypeScript SDK 桥接器
+mod ts_sdk_wrapper; // TypeScript SDK 桥接器 // Real Claude Agent SDK 包装器（✅ 真正使用官方 SDK）
 
 use analyzer::{AnalysisResult, CodeAnalyzer};
 use chrono::Utc;

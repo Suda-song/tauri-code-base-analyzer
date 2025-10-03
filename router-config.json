@@ -1,0 +1,22 @@
+{
+  "LOG": true,
+  "LOG_LEVEL": "debug",
+  "API_TIMEOUT_MS": 600000,
+  "Providers": [
+    {
+      "name": "deerapi",
+      "api_base_url": "https://api.deerapi.com/v1/messages",
+      "api_key": "sk-iJMVP8lVZW8jG2qlaz2krbFKJOHYzdzKXLa5fUWS10lIl3gb",
+      "models": [
+        "claude-sonnet-4-5-20250929",
+        "claude-opus-4-1-20250805",
+        "claude-3-5-sonnet-20241022"
+      ]
+    }
+  ],
+  "Router": {
+    "default": "deerapi,claude-sonnet-4-5-20250929",
+    "background": "deerapi,claude-3-5-sonnet-20241022",
+    "think": "deerapi,claude-opus-4-1-20250805"
+  }
+}
