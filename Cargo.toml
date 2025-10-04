@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "src-tauri",
+    "crates/codebase-mcp-server",
+]
+resolver = "2"
+

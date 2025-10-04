@@ -1,229 +1,283 @@
-# Tauri 代码库分析器
+# Tauri 代码库分析器 (MCP Agent 架构)
 
-一个基于 Tauri 的前端项目代码分析工具，能够精确提取 Vue、TypeScript、JavaScript 项目中的代码实体信息，生成结构化的 JSON 文档。
+基于 **Claude Agent SDK** 和 **MCP 协议** 的代码分析 AI Agent 系统。
 
-## 🚀 功能特性
+## 🎯 核心特性
 
-### 📊 智能代码分析
-- **多文件类型支持**：Vue (.vue)、TypeScript (.ts)、TSX (.tsx)、JavaScript (.js)
-- **精确实体提取**：函数、类、接口、组件、常量等代码实体
-- **工作区识别**：自动检测 monorepo 结构和 workspace 配置
-- **DDD 模式检测**：识别领域驱动设计相关的代码模式
+- ✅ **官方 SDK 驱动**: 使用 `@anthropic-ai/claude-agent-sdk@0.1.5`
+- ✅ **MCP 工具扩展**: 通过 MCP 协议提供代码分析工具
+- ✅ **DeerAPI 支持**: 通过 `claude-code-router` 代理到 DeerAPI
+- ✅ **极简架构**: 总代码量 ~280 行 (相比传统方案节省 73%)
 
-### 🏗️ 项目结构分析
-- **Workspace 支持**：
-  - 自动解析 `pnpm-workspace.yaml` 配置
-  - 识别 `package.json` 中的 workspaces 字段
-  - 智能查找 workspace 包的实际路径
-- **依赖关系映射**：
-  - 解析 `workspace:*` 依赖
-  - 识别 `dependenciesMeta.injected` 配置
-  - 构建包与包之间的关系图
+## 📋 项目结构
 
-### 📁 智能文件管理
-- **自动输出目录**：在项目根目录的 `package.json` 同级创建 `codebase` 文件夹
-- **时间戳文件名**：生成 `base_entity_YYYYMMDD_HHMMSS.json` 避免覆盖
-- **一键打开位置**：跨平台支持直接打开生成文件所在目录
-
-### 🎨 用户体验
-- **分析历史记录**：保存最近 5 次分析的目录，快速切换
-- **实时进度反馈**：显示分析统计和详细信息
-- **中文界面**：完全中文化的用户界面
-
-## 📦 安装和运行
-
-### 环境要求
-- Node.js 16+
-- Rust 1.70+
-- npm 或 pnpm
-
-### 安装依赖
-```bash
-npm install
+```
+tauri-code-base-analyzer/
+├── crates/
+│   └── codebase-mcp-server/          # MCP 服务器 (提供代码分析工具)
+│       ├── src/main.rs                # MCP 协议实现
+│       └── Cargo.toml
+│
+├── src-tauri/
+│   ├── src/
+│   │   ├── claude_client/             # Claude API 客户端 (仅用于 enrichment)
+│   │   └── tool_execution/            # 代码分析工具
+│   │       └── codebase/              # 代码库分析模块
+│   │           ├── extractors/        # 代码提取器 (TS/Vue)
+│   │           ├── enrichment/        # LLM 增强
+│   │           ├── embeddings.rs      # 向量化
+│   │           ├── chunking.rs        # 代码分块
+│   │           └── file_walker.rs     # 项目扫描
+│   ├── examples/
+│   │   └── mcp_agent_example.rs       # MCP Agent 示例
+│   └── Cargo.toml
+│
+├── scripts/
+│   ├── mcp-agent-bridge.ts            # Node.js Bridge (极简)
+│   ├── run-mcp-agent.sh               # 完整运行脚本
+│   ├── package.json
+│   └── dist/                          # 编译输出
+│
+├── router-config.json                 # claude-code-router 配置
+├── COMPLETE_ARCHITECTURE.md           # 完整架构文档
+├── CLAUDE_AGENT_SDK_DEEP_DIVE.md     # SDK 深度解析
+└── README.md
 ```
 
-### 开发模式
+## 🚀 快速开始
+
+### 前置要求
+
+1. **Rust** (>= 1.70)
+2. **Node.js** (>= 18) 和 **pnpm**
+3. **claude-code-router**:
+   ```bash
+   pnpm install -g @musistudio/claude-code-router
+   ```
+
+### 步骤 1: 配置 API Key
+
+在 `src-tauri/.env` 文件中设置（可选，router 配置已包含）：
+
 ```bash
-npm run tauri:dev
+ANTHROPIC_API_KEY=sk-xxx  # DeerAPI Key
 ```
 
-### 生产构建
+### 步骤 2: 一键运行
+
 ```bash
-npm run tauri:build
+./scripts/run-mcp-agent.sh
 ```
 
-## 🔧 使用方法
+这个脚本会自动：
 
-### 第一步：选择项目目录
-1. 点击 **"选择目录"** 按钮
-2. 选择要分析的前端项目根目录
-3. 或从历史记录中快速选择之前分析过的目录
+1. 编译 Rust MCP 服务器
+2. 编译 Node.js Bridge
+3. 启动 claude-code-router
+4. 运行示例
 
-### 第二步：开始分析
-1. 点击 **"Analyze Repository"** 按钮
-2. 系统会自动：
-   - 扫描项目文件结构
-   - 解析 workspace 配置
-   - 提取代码实体信息
-   - 统计分析结果
+### 手动运行
 
-### 第三步：查看结果
-分析完成后可以查看：
-- **统计信息**：总文件数、总实体数、Workspace包数量
-- **实体详情**：每个代码实体的详细信息，包括类型标签和位置信息
+```bash
+# 1. 编译 MCP 服务器
+cargo build --release -p codebase-mcp-server
 
-### 第四步：保存结果
-1. 点击 **"Save base_entity.json"** 按钮
-2. 文件会自动保存到项目的 `codebase` 目录
-3. 文件名包含时间戳，格式：`base_entity_20241201_143022.json`
-4. 点击 **"📂 打开文件位置"** 直接访问生成的文件
+# 2. 编译 Bridge
+cd scripts && pnpm install && pnpm run build:mcp && cd ..
 
-## 📋 生成的实体格式
+# 3. 启动 router
+ccr start &
+
+# 4. 运行示例
+cargo run --example mcp_agent_example
+```
+
+## 🔧 MCP 工具
+
+MCP 服务器提供以下工具：
+
+### 1. `scan_project` - 扫描项目
 
 ```json
 {
-  "entities": [
+  "project_path": "/path/to/project",
+  "extensions": [".ts", ".tsx", ".vue"]
+}
+```
+
+**功能**: 扫描项目目录，提取所有代码实体（组件、函数、类等）
+
+### 2. `analyze_entity` - 分析实体
+
+```json
+{
+  "entity_id": "Component:Header",
+  "project_path": "/path/to/project"
+}
+```
+
+**功能**: 分析特定实体的依赖关系、调用关系
+
+### 3. `enrich_code` - 生成摘要
+
+```json
+{
+  "entities_json_path": "/path/to/entities.json",
+  "output_path": "entities.enriched.json",
+  "concurrency": 5
+}
+```
+
+**功能**: 使用 LLM 为代码生成摘要和标签
+
+## 📚 架构说明
+
+### 极简三层架构
+
+```
+Rust 应用 (50 行)
+  ↓ 调用
+Node.js Bridge (30 行)
+  ↓ query({ prompt, options: { mcpServers } })
+@anthropic-ai/claude-agent-sdk (官方)
+  ↓ 自动管理 Agent 循环、工具调用
+MCP 服务器 (200 行)
+  ↓ 调用
+代码分析工具 (FileWalker, Extractors, Enrichment...)
+```
+
+### 为什么这么简单？
+
+**官方 SDK 已经提供了**:
+
+- ✅ Agent 自动循环
+- ✅ 工具自动调用
+- ✅ 权限管理
+- ✅ 错误处理
+- ✅ 成本追踪
+- ✅ 会话管理
+
+**我们只需要**:
+
+- 📦 实现代码分析工具 (作为 MCP 服务器)
+- 🔌 配置 MCP 连接
+
+详见: [COMPLETE_ARCHITECTURE.md](./COMPLETE_ARCHITECTURE.md)
+
+## 🔑 DeerAPI 配置
+
+通过 `claude-code-router` 代理到 DeerAPI：
+
+```json
+{
+  "Providers": [
     {
-      "id": "Function:buildGraphFromFile",
-      "type": "function",
-      "file": "packages/graph-builder-agent/src/builder.ts",
-      "loc": {
-        "start": 1008,
-        "end": 1015
-      },
-      "rawName": "buildGraphFromFile",
-      "isWorkspace": true,
-      "isDDD": false
+      "name": "deerapi",
+      "api_base_url": "https://api.deerapi.com/v1/messages",
+      "api_key": "sk-xxx",
+      "models": ["claude-sonnet-4-5-20250929"]
     }
   ],
-  "total_files": 156,
-  "total_entities": 342,
-  "analysis_timestamp": "2024-12-01T14:30:22Z",
-  "workspace_info": {
-    "root_directory": "/path/to/project",
-    "package_names": ["@company/shared-utils", "@company/core"],
-    "package_paths": ["/path/to/packages/shared-utils", "/path/to/packages/core"],
-    "is_monorepo": true
+  "Router": {
+    "default": "deerapi,claude-sonnet-4-5-20250929"
   }
 }
 ```
 
-### 实体字段说明
+配置文件: `router-config.json`
 
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `id` | string | 实体唯一标识符，格式：`类型:名称` |
-| `type` | string | 实体类型：function、class、interface、component、const 等 |
-| `file` | string | 文件相对路径 |
-| `loc` | object | 代码位置信息（起始行号和结束行号）|
-| `rawName` | string | 实体原始名称 |
-| `isWorkspace` | boolean | 是否属于 workspace 包 |
-| `isDDD` | boolean | 是否使用 DDD 模式 |
+## 📖 文档
 
-## 🏗️ 核心分析流程
+- [COMPLETE_ARCHITECTURE.md](./COMPLETE_ARCHITECTURE.md) - 完整架构设计
+- [CLAUDE_AGENT_SDK_DEEP_DIVE.md](./CLAUDE_AGENT_SDK_DEEP_DIVE.md) - SDK 深度解析
 
-### 1. 项目发现阶段
-```
-扫描目录 → 查找 package.json → 解析 workspace 配置 → 构建包映射
-```
-
-### 2. 文件收集阶段
-```
-遍历源码目录 → 过滤文件类型 → 排除无关目录 → 生成文件列表
-```
-
-### 3. 代码解析阶段
-```
-读取文件内容 → 正则表达式匹配 → 提取实体信息 → 标记属性
-```
-
-### 4. 结果生成阶段
-```
-合并实体列表 → 确保ID唯一性 → 生成统计信息 → 保存JSON文件
-```
-
-## 🔍 支持的实体类型
-
-### Vue 文件 (.vue)
-- **组件**：Vue 组件默认导出
-- **Composables**：`use*` 模式的组合式函数
-- **Script 内容**：TypeScript/JavaScript 实体
-
-### TypeScript/JavaScript 文件 (.ts, .tsx, .js, .jsx)
-- **函数**：`function` 和箭头函数
-- **类**：`class` 定义
-- **接口**：`interface` 定义
-- **类型**：`type` 别名
-- **常量**：`const` 声明
-
-### 识别模式
-- **导出实体**：`export` 关键字标记的实体
-- **工作区包**：位于 packages/、apps/、libs/ 等目录的文件
-- **DDD 模式**：导入 `@xhs/di` 的文件
-
-## 📂 目录结构
+## 🎉 示例输出
 
 ```
-tauri-code-base-analyzer/
-├── src/                    # 前端源码 (Next.js)
-│   ├── app/
-│   │   ├── globals.css    # 全局样式
-│   │   └── page.tsx       # 主界面组件
-│   └── ...
-├── src-tauri/             # Tauri 后端 (Rust)
-│   ├── src/
-│   │   ├── main.rs        # 主程序入口
-│   │   ├── precise_analyzer.rs  # 精确分析器
-│   │   ├── analyzer.rs    # 基础分析器
-│   │   └── ...
-│   ├── Cargo.toml         # Rust 依赖配置
-│   └── tauri.conf.json    # Tauri 配置
-├── package.json           # Node.js 依赖配置
-└── README.md             # 项目文档
+🤖 MCP Agent 代码分析示例
+============================================================
+
+📂 项目路径: /path/to/vue-project
+
+📝 任务描述:
+   - 扫描项目并提取代码实体
+   - 统计各类型实体数量
+   - 生成项目概览报告
+
+🚀 启动 MCP Agent Bridge...
+
+📩 消息类型: assistant
+  🔧 工具调用: scan_project
+📩 消息类型: assistant
+  🔧 工具调用: enrich_code
+
+✅ 任务完成
+  轮数: 3
+  Token: 15420
+  成本: $0.0234
+
+============================================================
+✅ 分析完成!
+============================================================
+
+📊 AI 分析报告:
+
+该项目包含 25 个 Vue 组件：
+
+核心组件:
+• Header (src/components/Header.vue) - 页面头部导航组件
+  - 依赖: Icon, Menu
+  - 事件: onMenuClick, onLogout
+
+• UserCard (src/components/UserCard.vue) - 用户信息卡片
+  - 依赖: Avatar, Button
+  - Props: userId, showActions
+
+...
+
+============================================================
 ```
 
-## 🛠️ 技术栈
+## 🛠️ 开发
 
-### 前端
-- **框架**：Next.js 14 + React 18
-- **语言**：TypeScript
-- **样式**：CSS Modules
-- **UI**：原生 HTML/CSS
+### 添加新的 MCP 工具
 
-### 后端
-- **框架**：Tauri 2.x
-- **语言**：Rust
-- **依赖**：
-  - `regex` - 正则表达式解析
-  - `serde` - JSON 序列化
-  - `chrono` - 时间处理
-  - `walkdir` - 目录遍历
+编辑 `crates/codebase-mcp-server/src/main.rs`:
 
-## 🔧 配置说明
+```rust
+Tool {
+    name: "your_new_tool".to_string(),
+    description: "工具描述".to_string(),
+    input_schema: json!({
+        "type": "object",
+        "properties": {
+            "param1": { "type": "string" }
+        },
+        "required": ["param1"]
+    }),
+}
+```
 
-### 权限配置
-应用需要以下权限：
-- **文件系统**：读取项目文件和写入分析结果
-- **对话框**：选择目录的文件选择器
-- **Shell**：打开文件管理器
+添加工具执行逻辑：
 
-### 自定义配置
-可以通过修改 `src-tauri/src/precise_analyzer.rs` 中的正则表达式来：
-- 添加新的实体类型识别
-- 调整文件过滤规则
-- 修改 workspace 检测逻辑
+```rust
+"your_new_tool" => {
+    // 实现工具逻辑
+    Ok(json!({
+        "success": true,
+        "result": "..."
+    }))
+}
+```
 
-## 🚨 注意事项
+SDK 会自动整合新工具，AI 立即可用！
 
-1. **大型项目**：对于包含大量文件的项目，分析可能需要较长时间
-2. **权限要求**：确保对选择的目录有读取权限
-3. **内存使用**：分析大型 monorepo 时可能占用较多内存
-4. **文件编码**：仅支持 UTF-8 编码的源文件
+## 📄 License
 
-## 🤝 贡献
+MIT
 
-欢迎提交 Issue 和 Pull Request 来改进这个工具！
+## 🙏 致谢
 
-## 📄 许可证
-
-MIT License - 详见 LICENSE 文件
+- [Anthropic](https://www.anthropic.com/) - Claude API 和 Agent SDK
+- [DeerAPI](https://deerapi.com/) - Claude API 代理
+- [@musistudio/claude-code-router](https://github.com/musilinq/claude-code-router) - API 路由器

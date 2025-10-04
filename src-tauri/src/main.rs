@@ -6,14 +6,9 @@ mod entity_analyzer;
 mod precise_analyzer;
 mod test;
 
-// 新的三层架构模块
-mod agent_core; // 第 3 层：应用
-mod agent_sdk_wrapper; // Claude Agent SDK 包装器（基于理念，旧版）
-mod claude_client; // 第 1 层：基础设施（保留，用于 enrichment）
-mod enhanced_claude_wrapper; // 增强型 Claude 包装器（旧版）
-mod real_agent_sdk_wrapper;
-mod tool_execution; // 第 2 层：工具
-mod ts_sdk_wrapper; // TypeScript SDK 桥接器 // Real Claude Agent SDK 包装器（✅ 真正使用官方 SDK）
+// 核心模块
+mod claude_client; // 基础设施层：Claude API 客户端（仅用于 enrichment）
+mod tool_execution; // 工具层：代码分析工具（被 MCP 服务器调用）
 
 use analyzer::{AnalysisResult, CodeAnalyzer};
 use chrono::Utc;

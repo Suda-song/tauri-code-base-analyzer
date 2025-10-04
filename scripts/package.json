@@ -5,10 +5,8 @@
   "main": "dist/claude-bridge.js",
   "scripts": {
     "build": "tsc",
-    "build:enhanced": "tsc enhanced-claude-bridge.ts --outDir dist --module commonjs --target es2020 --esModuleInterop --resolveJsonModule",
-    "build:agent": "tsc agent-sdk-bridge.ts --outDir dist --module commonjs --target es2020 --esModuleInterop --resolveJsonModule",
-    "build:real-agent": "tsc real-agent-sdk-bridge.ts --outDir dist --module esnext --target es2020 --esModuleInterop --resolveJsonModule --moduleResolution node",
-    "build:all": "npm run build && npm run build:enhanced && npm run build:agent && npm run build:real-agent",
+    "build:mcp": "tsc mcp-agent-bridge.ts --outDir dist --module esnext --target es2020 --esModuleInterop --resolveJsonModule --moduleResolution node",
+    "build:all": "npm run build:mcp",
     "dev": "tsc --watch"
   },
   "dependencies": {
