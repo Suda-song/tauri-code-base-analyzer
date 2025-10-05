@@ -6,8 +6,11 @@
   "scripts": {
     "build": "tsc",
     "build:mcp": "tsc mcp-agent-bridge.ts --outDir dist --module esnext --target es2020 --esModuleInterop --resolveJsonModule --moduleResolution node",
-    "build:all": "npm run build:mcp",
-    "dev": "tsc --watch"
+    "build:mcp-persistent": "tsc mcp-agent-bridge-persistent.ts --outDir dist --module esnext --target es2020 --esModuleInterop --resolveJsonModule --moduleResolution node",
+    "build:continuous": "tsc continuous-session-bridge.ts --outDir dist --module esnext --target es2020 --esModuleInterop --resolveJsonModule --moduleResolution node",
+    "build:all": "npm run build:mcp && npm run build:mcp-persistent && npm run build:continuous",
+    "dev": "tsc --watch",
+    "install:router": "pnpm install -g @musistudio/claude-code-router"
   },
   "dependencies": {
     "@anthropic-ai/claude-agent-sdk": "^0.1.5",

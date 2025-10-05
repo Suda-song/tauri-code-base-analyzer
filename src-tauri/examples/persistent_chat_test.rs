@@ -167,7 +167,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!();
 
     // 测试工作目录
-    let workspace = "/tmp/test-workspace";
+    let workspace = "/Users/songdingan/dev/modular-code-analysis-util";
     std::fs::create_dir_all(workspace)?;
 
     // 创建持久化 Bridge

@@ -101,7 +101,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("{}", "=".repeat(60));
 
     // 测试工作目录
-    let workspace = "/tmp/test-workspace";
+    let workspace = "/Users/songdingan/dev/modular-code-analysis-util";
     std::fs::create_dir_all(workspace)?;
 
     let mut turn_count = 0;

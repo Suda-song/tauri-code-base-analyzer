@@ -2,9 +2,9 @@
 
 # 启动 claude-code-router 并运行 Agent SDK 测试
 # 这个脚本会：
-# 1. 启动 claude-code-router 代理服务器
-# 2. 等待服务启动
-# 3. 运行 Rust Agent SDK 测试
+# 1. 安装/检查 claude-code-router
+# 2. 启动代理服务器
+# 3. 运行测试
 # 4. 清理进程
 
 set -e
@@ -13,18 +13,35 @@ echo "=========================================="
 echo "🚀 启动 Claude Code Router + Agent SDK 测试"
 echo "=========================================="
 
-# 检查 claude-code-router 是否构建
-if [ ! -f "/Users/songdingan/dev/claude-code-router/dist/cli.js" ]; then
-    echo "❌ claude-code-router 未构建，正在构建..."
-    cd /Users/songdingan/dev/claude-code-router
-    pnpm install && pnpm run build
+# 检查 claude-code-router 是否全局安装
+if ! command -v ccr &> /dev/null; then
+    echo "❌ claude-code-router 未安装，正在全局安装..."
+    pnpm install -g @musistudio/claude-code-router
+    
+    if ! command -v ccr &> /dev/null; then
+        echo "❌ 全局安装失败，请手动安装:"
+        echo "   pnpm install -g @musistudio/claude-code-router"
+        exit 1
+    fi
+fi
+
+echo "✅ claude-code-router 已安装: $(which ccr)"
+
+# 确保配置文件存在
+CONFIG_DIR="$HOME/.claude-code-router"
+CONFIG_FILE="$CONFIG_DIR/config.json"
+
+if [ ! -f "$CONFIG_FILE" ]; then
+    echo "📝 创建配置文件..."
+    mkdir -p "$CONFIG_DIR"
+    cp router-config.json "$CONFIG_FILE"
+    echo "   配置文件: $CONFIG_FILE"
 fi
 
 # 1. 启动 claude-code-router (后台)
 echo ""
 echo "1️⃣ 启动 claude-code-router (localhost:3456)..."
-cd /Users/songdingan/dev/claude-code-router
-node dist/cli.js start > /tmp/ccr.log 2>&1 &
+ccr start > /tmp/ccr.log 2>&1 &
 CCR_PID=$!
 echo "   PID: $CCR_PID"
 
@@ -48,7 +65,7 @@ done
 echo ""
 echo "2️⃣ 配置信息:"
 echo "   代理地址: http://localhost:3456"
-echo "   配置文件: ~/.claude-code-router/config.json"
+echo "   配置文件: $CONFIG_FILE"
 echo "   日志文件: /tmp/ccr.log"
 
 # 3. 测试 DeerAPI 连接
@@ -77,10 +94,10 @@ fi
 
 # 4. 运行 Rust Agent SDK 测试
 echo ""
-echo "4️⃣ 运行 Rust Agent SDK 测试..."
+echo "4️⃣ 运行 Rust Agent SDK 交互测试..."
 echo "=========================================="
-cd /Users/songdingan/dev/tauri-code-base-analyzer/src-tauri
-cargo run --example agent_sdk_example 2>&1 | grep -v "warning:"
+cd src-tauri
+cargo run --example simple_chat_test 2>&1 | grep -v "warning:"
 
 # 清理
 echo ""
@@ -88,4 +105,3 @@ echo "=========================================="
 echo "🧹 清理..."
 kill $CCR_PID 2>/dev/null || true
 echo "✅ 完成!"
-
